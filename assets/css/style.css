@@ -3402,3 +3402,69 @@ body.theme-light.mobil-menu-acik .active-lang {
     color: #cca46a !important;
     -webkit-text-fill-color: #cca46a !important;
 }
+/* =================================================
+   FOOTER DESKTOP HARD RESET - FINAL
+   Sosyal sol / Telif tam orta / Yasal sağ
+   ================================================= */
+
+@media (min-width: 901px) {
+
+    .about-footer-yeni {
+        width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    .about-footer-yeni .f-yeni-icerik {
+        width: 100% !important;
+        height: 74px !important;
+        padding: 0 4% !important;
+        box-sizing: border-box !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        position: relative !important;
+    }
+
+    .about-footer-yeni .f-sosyal {
+        position: absolute !important;
+        left: 4% !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 22px !important;
+    }
+
+    .about-footer-yeni .f-telif {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+
+        text-align: center !important;
+        white-space: nowrap !important;
+        margin: 0 !important;
+    }
+
+    .about-footer-yeni .f-yasal-alan {
+        position: absolute !important;
+        right: 4% !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 10px !important;
+
+        white-space: nowrap !important;
+        margin: 0 !important;
+    }
+}
