@@ -1,0 +1,1102 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Garanti Design | Architectural Visualization</title> 
+    <meta name="description"
+      content="Garanti Design is an architectural visualization studio specializing in architectural renderings, landscape visualization, interior design presentations and cinematic animations.">
+
+<meta name="keywords"
+      content="Architectural Visualization, Architectural Rendering, Interior Visualization, Landscape Visualization, 3D Rendering, Architectural Animation, Garanti Design">
+
+<meta name="author"
+      content="Garanti Design">
+
+<meta name="robots"
+      content="index, follow">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/workflow.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link rel="apple-touch-icon" href="assets/images/logo.png">
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+      content="Garanti Design | Architectural Visualization Studio">
+
+<meta property="og:description"
+      content="Architectural Rendering, Landscape Visualization, Interior Design Presentation and Cinematic Animation Studio.">
+
+<meta property="og:image"
+      content="assets/images/og-image.jpg">
+
+<meta property="og:site_name"
+      content="Garanti Design">
+</head>
+<body> 
+
+    <div class="gecis-perdesi" id="gecisPerdesi">
+        <div class="gecis-logo-ikili-konteyner">
+            <div class="harf-kutusu harf-g">
+                <img src="assets/images/logo-g.png" class="harf-aynali" alt="G Mirror">
+                <img src="assets/images/logo-g-original.png" class="harf-orijinal" alt="G Original">
+            </div>
+            <div class="harf-kutusu harf-d">
+                <img src="assets/images/logo-d.png" class="harf-aynali" alt="D Mirror">
+                <img src="assets/images/logo-d-original.png" class="harf-orijinal" alt="D Original">
+            </div>
+        </div>
+    </div>
+
+<div class="yukleme-ekrani" id="preloader">
+
+
+
+    <div class="orijinal-dolum-konteyner">
+        <img src="assets/images/logo-maske-siyah.png" class="pre-katman katman-altlik-siyah" alt="Base Grid">
+        <div class="pre-katman akici-bronz-sıvı"></div>
+        <img src="assets/images/logo.png" class="pre-katman katman-orijinal-logo" alt="Orijinal Logo">
+    </div>
+
+    <div class="preloader-yazi">
+        <span>GARANTI DESIGN</span>
+        <small>visualizing the future</small>
+    </div>
+</div>
+
+<div class="mouse-nokta" id="mouseNokta"></div>
+<div class="mouse-halka" id="mouseHalka"></div>
+
+</button>
+
+    <header class="ust-menu"> 
+        <a href="#" class="logo-alani" id="m-logo"> 
+            <img src="assets/images/logo.png" alt="Garanti Design Logo"> 
+        </a> 
+        <button class="mobil-menu-btn" id="mobilMenuBtn" type="button" aria-label="Mobil menüyü aç">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+        <div class="nav-merkez-grup"> 
+            <nav class="nav-linkler"> 
+                <a href="#" class="aktif" id="m-anasayfa"><i class="fa-solid fa-house"></i> Home</a> 
+                
+                <!-- 🌐 MASTER STUDIO BUTTON (MEGA MENU TRIGGER) -->
+                <a href="#" id="studioBtn">
+    <i class="fa-solid fa-cubes"></i>
+    <span id="m-studio-ana">Studio</span>
+    <i class="fa-solid fa-plus menu-ok"></i>
+</a>
+
+                <a href="#" id="projelerBtn">
+    <i class="fa-solid fa-ruler-combined"></i>
+    <span id="m-projeler">Projects</span>
+    <i class="fa-solid fa-plus menu-ok"></i>
+</a>
+                <a href="#" id="m-iletisim"><i class="fa-solid fa-phone"></i> Contact</a> 
+            </nav> 
+            
+            <div class="dil-secici"> 
+                <button class="lang-btn active-lang" id="btn-lang-tr" onclick="dilDegistir('tr', event)"> TR <span class="aktif-nokta"></span> </button> 
+                <span class="lang-ayrac">/</span> 
+                <button class="lang-btn" id="btn-lang-en" onclick="dilDegistir('en', event)"> EN <span class="aktif-nokta"></span> </button> 
+                
+            </div>
+            <button class="theme-floating-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+    <i class="fa-solid fa-moon"></i>
+    <span>THEME</span>
+</button>
+        </div> 
+        
+    </header> 
+
+    <!-- 🌐 STUDIO MEGA LUXURY PANEL (BÜYÜK HARF + AKICI ALT YAZILAR GERİ GELDİ) -->
+    <div class="mega-menu" id="studioMegaMenu"> 
+        <div class="mega-menu-icerik"> 
+            <!-- Sol Kutu: Hakkımızda -->
+            <div class="mega-kutu" id="m-hakkimizda"> 
+                <div class="mega-kutu-ust-grup"> 
+                    <div class="ikon-alani"><i class="fa-solid fa-user-tie"></i></div> 
+                    <div class="yazi-alani"> 
+                        <h3 id="mega-about-baslik" style="text-transform: uppercase; letter-spacing: 1px;">HAKKIMIZDA</h3> 
+                        <p id="mega-about-yazi">Garanti Design kurumsal manifestomuz, felsefemiz ve başarı tablomuz</p> 
+                    </div> 
+                </div> 
+                <span class="aktif-nokta" style="margin-left: 58px;"></span> 
+            </div> 
+            <!-- Sağ Kutu: İş Akışı -->
+            <div class="mega-kutu" id="m-is-akisi"> 
+                <div class="mega-kutu-ust-grup"> 
+                    <div class="ikon-alani"><i class="fa-solid fa-microchip"></i></div> 
+                    <div class="yazi-alani"> 
+                        <h3 id="mega-flow-baslik" style="text-transform: uppercase; letter-spacing: 1px;">İŞ AKIŞI</h3> 
+                        <p id="mega-flow-yazi">İlk aşamadan başlayıp proje teslimine kadar uzanan süreç pratiğimiz</p> 
+                    </div> 
+                </div> 
+                <span class="aktif-nokta" style="margin-left: 58px;"></span> 
+            </div> 
+        </div> 
+    </div> 
+
+
+<!-- PROJELER MEGA MENU -->
+<div class="mega-menu" id="megaMenu">
+    <div class="mega-menu-icerik">
+
+        <!-- ARCHITECTURAL & LANDSCAPE -->
+        <div class="mega-kutu" id="project-architecture" data-project-filter="architecture-landscape">
+            <div class="mega-kutu-ust-grup">
+                <div class="ikon-alani">
+                    <i class="fa-solid fa-building-user"></i>
+                </div>
+                <div class="yazi-alani">
+                    <h3 id="mega-mimari-baslik">ARCHITECTURAL & LANDSCAPE PROJECTS</h3>
+                    <p id="mega-mimari-yazi">
+                        Dış cephe, çevre düzenlemesi ve büyük ölçekli projelerimiz
+                    </p>
+                </div>
+            </div>
+            <span class="aktif-nokta" style="margin-left:58px;"></span>
+        </div>
+
+        <!-- INTERIOR DESIGN -->
+        <div class="mega-kutu" id="project-interior" data-project-filter="interior">
+            <div class="mega-kutu-ust-grup">
+                <div class="ikon-alani">
+                    <i class="fa-solid fa-couch"></i>
+                </div>
+                <div class="yazi-alani">
+                    <h3 id="mega-ic-baslik">INTERIOR DESIGN PROJECTS</h3>
+                    <p id="mega-ic-yazi">
+                        Otel, ofis ve konutlar için detaylı iç mimari projeler
+                    </p>
+                </div>
+            </div>
+            <span class="aktif-nokta" style="margin-left:58px;"></span>
+        </div>
+
+        <!-- PRODUCT DESIGN -->
+        <div class="mega-kutu" id="project-product" data-project-filter="product">
+            <div class="mega-kutu-ust-grup">
+                <div class="ikon-alani">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+                <div class="yazi-alani">
+                    <h3 id="mega-product-baslik">PRODUCT DESIGN</h3>
+                    <p id="mega-product-yazi">
+                        Özel tasarım ürünler ve konsept geliştirme çalışmaları
+                    </p>
+                </div>
+            </div>
+            <span class="aktif-nokta" style="margin-left:58px;"></span>
+        </div>
+
+    </div>
+</div>
+
+    <section class="hero-sahne" id="homeSayfasi"> 
+        <video id="bgVideo" autoplay loop muted playsinline class="hero-video"> 
+            <source src="assets/video/villa-test.mp4" type="video/mp4"> 
+        </video> 
+        <div class="hero-karartma"></div> 
+        <div class="hero-icerik"> 
+            <h1 id="hero-ana-baslik">WE VISUALIZE THE FUTURE</h1> 
+            <p id="hero-alt-baslik">Architectural Rendering, Landscape & Interior Animation Studio</p> 
+            <div class="hero-butonlar"> 
+                <a href="#" class="btn-bronz" id="btn-inceleyin">Explore Our Projects</a> 
+                <a href="#" class="btn-seffaf" id="btn-ulasin">Contact Us</a> 
+            </div> 
+        </div> 
+
+        <footer class="sabit-footer-bar"> 
+<div class="f-sosyal">
+
+    <a href="https://www.instagram.com/garantidesigncom/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61584720006828"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-facebook-f"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://www.youtube.com/@GarantiDesign"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-youtube"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://x.com/garantidesignco"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 512 512"
+             style="width: 14px; height: 14px; fill: currentColor; vertical-align: middle;">
+            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+        </svg>
+        <span class="aktif-nokta"></span>
+    </a>
+
+</div>
+            <div class="f-telif" id="footer-telif"> &copy; 2016 Garanti Design. All Rights Reserved. </div> 
+<div class="f-yasal-alan">
+
+    <a href="#" class="yasal-link legal-link" data-legal="terms">
+        <span id="yasal-sartlar">Terms and Conditions</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <span class="ayrac">|</span>
+
+    <a href="#" class="yasal-link legal-link" data-legal="privacy">
+        <span id="yasal-gizlilik">Privacy Policy</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <span class="ayrac">|</span>
+
+    <a href="#" class="yasal-link legal-link" data-legal="cookie">
+        <span id="yasal-cerez">Cookie Policy</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+</div>
+        </footer> 
+    </section> 
+
+    <section class="about-sahne sayfa-gizli" id="aboutSayfasi">
+        <div class="about-konteyner-duzenleyici">
+            
+            <div class="about-ust-blok">
+                <div class="about-baslik-alani">
+                    <span class="about-ust-etiket">CORPORATE MANIFESTO</span>
+                    <h2>WE ARCHITECT EMOTIONS</h2>
+                    <div class="about-cizgi"></div>
+                </div>
+                <div class="about-ana-yazi">
+                    <p>
+                        Garanti Design, küresel vizyonu ve yenilikçi bakış açısıyla, fikirleri en gerçekçi ve en anlaşılır şekilde hayata geçiren yüksek segment bir tasarım, mühendislik ve danışmanlık kolektifidir. Kurulduğumuz 2015 yılından bu yana, ulusal ve uluslararası ölçekte imza attığımız nitelikli projelerle; teknik doğruluğu, estetik üstünlüğü và yaratıcı yaklaşımları tek bir potada eritiyoruz.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        Ana uzmanlık alanımız olan milimetrik detay çizimleri, profesyonel render hizmetleri and sinematik 3D animasyonların ötesinde; müteahhitlik hizmetleri, proje danışmanlığı, stratejik proje satışı ve premium segment ticari solutions'larımızla (araç galerisi ve rent a car ağı) iş ortaklarımıza uçtan uca sürdürülebilir bir ekosistem sunuyoruz. Güven, kalite và titiz çalışma anlayışımızla, her alanda sınırları zorlayan güçlü bir çözüm ortağıyız.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-cubuk-seksiyonu">
+                <h3 class="about-seksiyon-baslik">STUDIO TRACK RECORD</h3>
+                <div class="cubuk-konteyner">
+                    <div class="cubuk-grup">
+                        <div class="cubuk-ust-bilgi">
+                            <span>Years of Industry Experience</span>
+                            <span class="yuzde-degeri" data-hedef="10">10+</span>
+                        </div>
+                        <div class="cubuk-arka-plan">
+                            <div class="cubuk-ilerleme" style="--cubuk-genislik: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="cubuk-grup">
+                        <div class="cubuk-ust-bilgi">
+                            <span>Completed Renders & Animations</span>
+                            <span class="yuzde-degeri" data-hedef="250">250+</span>
+                        </div>
+                        <div class="cubuk-arka-plan">
+                            <div class="cubuk-ilerleme" style="--cubuk-genislik: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="cubuk-grup">
+                        <div class="cubuk-ust-bilgi">
+                            <span>Completed Execution Projects</span>
+                            <span class="yuzde-degeri" data-hedef="40">40+</span>
+                        </div>
+                        <div class="cubuk-arka-plan">
+                            <div class="cubuk-ilerleme" style="--cubuk-genislik: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="cubuk-grup">
+                        <div class="cubuk-ust-bilgi">
+                            <span>Global Reach (Countries Served)</span>
+                            <span class="yuzde-degeri" data-hedef="10">10+</span>
+                        </div>
+                        <div class="cubuk-arka-plan">
+                            <div class="cubuk-ilerleme" style="--cubuk-genislik: 45%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ortaklar-seksiyonu">
+                <h3 class="about-seksiyon-baslik">GLOBAL NETWORK & BRAND PARTNERS</h3>
+                <div class="ortaklar-akici-serit">
+                    <div class="ortak-logo-kart"><img src="assets/images/r1.webp" alt="Partner 1"></div>
+                    <div class="ortak-logo-kart"><img src="assets/images/r2.webp" alt="Partner 2"></div>
+                    <div class="ortak-logo-kart"><img src="assets/images/r3.webp" alt="Partner 3"></div>
+                    <div class="ortak-logo-kart"><img src="assets/images/r4.webp" alt="Partner 4"></div>
+                    <div class="ortak-logo-kart"><img src="assets/images/r5.webp" alt="Partner 5"></div>
+                    <div class="ortak-logo-kart"><img src="assets/images/r6.webp" alt="Partner 6"></div>
+                    <div class="ortak-logo-kart"><img src="assets/images/r1.webp" alt="Partner 1"></div>
+                    <div class="ortak-logo-kart"><img src="assets/images/r2.webp" alt="Partner 2"></div>
+                    <div class="ortak-logo-kart"><img src="assets/images/r3.webp" alt="Partner 3"></div>
+                    <div class="ortak-logo-kart"><img src="assets/images/r4.webp" alt="Partner 4"></div>
+                    <div class="ortak-logo-kart"><img src="assets/images/r5.webp" alt="Partner 5"></div>
+                    <div class="ortak-logo-kart"><img src="assets/images/r6.webp" alt="Partner 6"></div>
+                </div>
+            </div>
+
+            <h3 class="about-seksiyon-baslik">CORE ELEMENTS</h3>
+            <div class="about-grafik-izgara">
+                <div class="grafik-kart" style="--kart-sira: 1;">
+                    <div class="kart-isik"></div>
+                    <div class="kart-ikon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <h4>Detay Çizimler</h4>
+                    <p>Teknik doğruluk ve uluslararası standartlarda milimetrik uygulama ve detay projeleri.</p>
+                </div>
+                <div class="grafik-kart" style="--kart-sira: 2;">
+                    <div class="kart-isik"></div>
+                    <div class="kart-ikon"><i class="fa-solid fa-cubes"></i></div>
+                    <h4>Profesyonel 3D Modelleme</h4>
+                    <p>Tasarımlarınızın her kıvrımını donanım ivmeli katı modelleme teknolojileriyle dijitale aktarma.</p>
+                </div>
+                <div class="grafik-kart" style="--kart-sira: 3;">
+                    <div class="kart-isik"></div>
+                    <div class="kart-ikon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h4>Render Hizmetleri</h4>
+                    <p>Işığın, dokunun ve malzemenin foto-gerçekçi matematiksel hesaplamalarla master seviye sunumu.</p>
+                </div>
+                <div class="grafik-kart" style="--kart-sira: 4;">
+                    <div class="kart-isik"></div>
+                    <div class="kart-ikon"><i class="fa-solid fa-film"></i></div>
+                    <h4>3D Animasyon</h4>
+                    <p>Kamera fiziği ve akıcı çevre dinamikleriyle bezeli sinematik walkthrough şovları.</p>
+                </div>
+                <div class="grafik-kart" style="--kart-sira: 5;">
+                    <div class="kart-isik"></div>
+                    <div class="kart-ikon"><i class="fa-solid fa-vr-cardboard"></i></div>
+                    <h4>Archviz Teknolojisi & Virtual Reality</h4>
+                    <p>Büyük ölçekli mimari konseptlerin, peyzaj alanlarının ve sanal gerçeklik (VR) simülasyonlarının lüks görselleştirme sanatı.</p>
+                </div>
+                <div class="grafik-kart" style="--kart-sira: 6;">
+                    <div class="kart-isik"></div>
+                    <div class="kart-ikon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h4>Uygulama Projeleri</h4>
+                    <p>Şantiyede hatasız işleyecek, mühendislik ve mimari süreçleri birleştiren uygulama kalkanı.</p>
+                </div>
+            </div>
+
+            <div class="about-ilkeler-seksiyonu">
+                <h3 class="about-seksiyon-baslik" id="about-ilkeler-baslik">İLKELERİMİZ</h3>
+                <div class="ilkeler-izgara">
+                    <div class="ilke-kart" style="--ilke-sira: 1;">
+                        <div class="ilke-ikon-alani"><i class="fa-solid fa-bezier-curve"></i></div>
+                        <h4 id="ilke-t1">Detaylar</h4>
+                        <p id="ilke-d1">Her milimetrede en yüksek kaliteyi hedefleyen titiz ve kusursuz çizgi mimarisi.</p>
+                    </div>
+                    <div class="ilke-kart" style="--ilke-sira: 2;">
+                        <div class="ilke-ikon-alani"><i class="fa-solid fa-gem"></i></div>
+                        <h4 id="ilke-t2">Özen</h4>
+                        <p id="ilke-d2">Tasarımlarımıza and iş ortaklarımızın vizyonuna elit segmentte gösterilen sarsılmaz sadakat.</p>
+                    </div>
+                    <div class="ilke-kart" style="--ilke-sira: 3;">
+                        <div class="ilke-ikon-alani"><i class="fa-solid fa-bolt-lightning"></i></div>
+                        <h4 id="ilke-t3">Hızlı Çözümler</h4>
+                        <p id="ilke-d3">Zamanın değerini bilerek, estetikten ödün vermeden üretilen yüksek donanımlı projeler.</p>
+                    </div>
+                    <div class="ilke-kart" style="--ilke-sira: 4;">
+                        <div class="ilke-ikon-alani"><i class="fa-solid fa-comments"></i></div>
+                        <h4 id="ilke-t4">İletişim</h4>
+                        <p id="ilke-d4">Fikirlerin şeffafça paylaşıldığı, kesintisiz ve güvene dayalı global çözüm ortaklığı.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="basa-don-alani" id="basaDonBtn">
+                <span class="basa-don-metin">BACK TO TOP</span>
+                <div class="basa-don-nokta"></div>
+            </div>
+        </div> 
+
+        <footer class="about-footer-yeni"> 
+            <div class="f-yeni-icerik">
+<div class="f-sosyal">
+
+    <a href="https://www.instagram.com/garantidesigncom/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61584720006828"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-facebook-f"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://www.youtube.com/@GarantiDesign"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-youtube"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://x.com/garantidesignco"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 512 512"
+             style="width: 14px; height: 14px; fill: currentColor; vertical-align: middle;">
+            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+        </svg>
+        <span class="aktif-nokta"></span>
+    </a>
+
+</div>
+<div class="f-telif">
+    © 2016 GARANTI DESIGN. ALL RIGHTS RESERVED.
+</div>
+       <div class="f-yasal-alan">
+
+    <a href="#" class="yasal-link legal-link" data-legal="terms">
+        <span id="yasal-sartlar">Terms and Conditions</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <span class="ayrac">|</span>
+
+    <a href="#" class="yasal-link legal-link" data-legal="privacy">
+        <span id="yasal-gizlilik">Privacy Policy</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <span class="ayrac">|</span>
+
+    <a href="#" class="yasal-link legal-link" data-legal="cookie">
+        <span id="yasal-cerez">Cookie Policy</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+</div>
+            </div>
+        </footer>
+    </section>
+<section class="projects-sayfasi sayfa-gizli" id="projectsSayfasi">
+
+    <div class="projects-konteyner">
+
+        <div class="projects-hero">
+
+            <span class="projects-etiket" id="projects-etiket">
+                SELECTED WORKS
+            </span>
+
+            <h2 class="projects-baslik" id="projects-baslik">
+                OUR PROJECTS
+            </h2>
+
+            <p class="projects-aciklama" id="projects-aciklama">
+                Architectural, Interior and Product Design works developed by Garanti Design.
+            </p>
+
+        </div>
+
+        <div class="projects-kategori-switch">
+
+            <button class="project-tab aktif-tab" data-project="architecture-landscape">
+                <span id="projects-tab-architecture">
+    ARCHITECTURAL & LANDSCAPE
+</span>
+                <span class="project-dot"></span>
+            </button>
+
+            <button class="project-tab" data-project="interior">
+                <span id="projects-tab-interior">
+    INTERIOR DESIGN
+</span>
+                <span class="project-dot"></span>
+            </button>
+
+            <button class="project-tab" data-project="product">
+                <span id="projects-tab-product">
+    PRODUCT DESIGN
+</span>
+                <span class="project-dot"></span>
+            </button>
+
+        </div>
+
+    </div>
+    <div class="projects-grid-wrapper">
+
+    <div id="architecture-grid" class="projects-grid aktif-grid"></div>
+
+    <div id="interior-grid" class="projects-grid"></div>
+
+    <div id="product-grid" class="projects-grid"></div>
+    </div>
+
+    <div class="basa-don-alani" id="basaDonBtnProjects">
+    <span class="basa-don-metin">BACK TO TOP</span>
+    <div class="basa-don-nokta"></div>
+</div>
+<footer class="about-footer-yeni">
+    <div class="f-yeni-icerik">
+
+       <div class="f-sosyal">
+
+    <a href="https://www.instagram.com/garantidesigncom/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61584720006828"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-facebook-f"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://www.youtube.com/@GarantiDesign"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-youtube"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://x.com/garantidesignco"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 512 512"
+             style="width: 14px; height: 14px; fill: currentColor; vertical-align: middle;">
+            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+        </svg>
+        <span class="aktif-nokta"></span>
+    </a>
+
+</div>
+
+        <div class="f-telif" id="footer-telif-projects">
+            &copy; 2016 Garanti Design. All Rights Reserved.
+        </div>
+
+       <div class="f-yasal-alan">
+
+    <a href="#" class="yasal-link legal-link" data-legal="terms">
+        <span id="yasal-sartlar">Terms and Conditions</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <span class="ayrac">|</span>
+
+    <a href="#" class="yasal-link legal-link" data-legal="privacy">
+        <span id="yasal-gizlilik">Privacy Policy</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <span class="ayrac">|</span>
+
+    <a href="#" class="yasal-link legal-link" data-legal="cookie">
+        <span id="yasal-cerez">Cookie Policy</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+</div>
+
+    </div>
+</footer>
+
+</div>
+
+</section>
+  <section class="about-sahne sayfa-gizli" id="isAkisiSayfasi">
+    <div class="about-konteyner-duzenleyici workflow-konteyner">
+
+        <div class="about-ust-blok workflow-ust-blok">
+            <div class="about-baslik-alani">
+                <span class="about-ust-etiket" id="prac-ust-etiket">METHODOLOGY & TIMELINE</span>
+                <h2 id="prac-ana-baslik">CRAFTING REALITY FROM SKETCH</h2>
+                <div class="about-cizgi"></div>
+            </div>
+            <div class="about-ana-yazi">
+                <p id="prac-manifesto-metin">
+                    Every Garanti Design project moves through a precise production pipeline: analysis, modeling, material intelligence, cinematic lighting, review discipline and final delivery. Our workflow transforms raw architectural data into clear, realistic and emotionally powerful visual experiences.
+                </p>
+            </div>
+        </div>
+
+       <div class="workflow-timeline-alani client-journey-alani">
+    <h3 class="about-seksiyon-baslik" id="prac-surec-baslik">CLIENT JOURNEY</h3>
+
+<div class="client-journey-map">
+    <div class="journey-step">
+        <span>01</span><i class="fa-solid fa-phone"></i>
+        <h4>Initial Contact</h4>
+        <p>Müşteri ilk temasını kurar, proje fikri dinlenir.</p>
+    </div>
+
+    <div class="journey-step">
+        <span>02</span><i class="fa-solid fa-comments"></i>
+        <h4>Discovery & Brief</h4>
+        <p>Beklentiler, hedefler ve proje kapsamı netleştirilir.</p>
+    </div>
+
+    <div class="journey-step">
+        <span>03</span><i class="fa-solid fa-ruler-combined"></i>
+        <h4>Technical Analysis</h4>
+        <p>Planlar, çizimler ve mevcut proje verileri incelenir.</p>
+    </div>
+
+    <div class="journey-step">
+        <span>04</span><i class="fa-solid fa-cubes"></i>
+        <h4>Design Development</h4>
+        <p>Modelleme, malzeme dili ve görsel atmosfer geliştirilir.</p>
+    </div>
+
+    <div class="journey-step">
+        <span>05</span><i class="fa-solid fa-eye"></i>
+        <h4>Preview Presentation</h4>
+        <p>İlk önizleme müşteriyle paylaşılır ve değerlendirilir.</p>
+    </div>
+
+    <div class="journey-step">
+        <span>06</span><i class="fa-solid fa-arrows-rotate"></i>
+        <h4>Revision & Final</h4>
+        <p>Geri bildirimler uygulanır ve final üretim tamamlanır.</p>
+    </div>
+
+    <div class="journey-step journey-final">
+        <span>07</span><i class="fa-solid fa-rocket"></i>
+        <h4>Delivery & Support</h4>
+        <p>Final dosyalar teslim edilir, gerekli destek sağlanır.</p>
+    </div>
+</div>
+<div class="journey-complete-node">
+    <div class="complete-orb">
+        <i class="fa-solid fa-check"></i>
+    </div>
+    <span>PROJECT COMPLETE</span>
+    <p>Delivered with precision, clarity and presentation-ready visual quality.</p>
+</div>
+
+
+        <div class="about-ilkeler-seksiyonu workflow-quality">
+            <h3 class="about-seksiyon-baslik">QUALITY CONTROL SYSTEM</h3>
+            <div class="ilkeler-izgara">
+                <div class="ilke-kart" style="--ilke-sira: 1;">
+                    <div class="ilke-ikon-alani"><i class="fa-solid fa-ruler-combined"></i></div>
+                    <h4>Accuracy</h4>
+                    <p>Every visual decision is checked against architectural scale, material logic and project references.</p>
+                </div>
+
+                <div class="ilke-kart" style="--ilke-sira: 2;">
+                    <div class="ilke-ikon-alani"><i class="fa-solid fa-eye"></i></div>
+                    <h4>Visual Clarity</h4>
+                    <p>The final image must explain the design clearly while protecting the atmosphere of the project.</p>
+                </div>
+
+                <div class="ilke-kart" style="--ilke-sira: 3;">
+                    <div class="ilke-ikon-alani"><i class="fa-solid fa-arrows-rotate"></i></div>
+                    <h4>Revision Flow</h4>
+                    <p>Feedback is organized, interpreted and applied through a structured review process.</p>
+                </div>
+
+                <div class="ilke-kart" style="--ilke-sira: 4;">
+                    <div class="ilke-ikon-alani"><i class="fa-solid fa-gem"></i></div>
+                    <h4>Final Polish</h4>
+                    <p>Color, contrast, framing and detail balance are refined before the final delivery package.</p>
+                </div>
+            </div>
+        </div>
+
+<div class="workflow-software-seksiyonu">
+    <h3 class="about-seksiyon-baslik" id="prac-yazilim-baslik">STUDIO TOOLKIT</h3>
+
+    <div class="toolkit-akis">
+        <div class="toolkit-serit">
+            <div class="toolkit-item"><span>3DS MAX</span><small>Architectural Modeling</small></div>
+            <div class="toolkit-item"><span>AUTOCAD</span><small>Technical Drawing</small></div>
+            <div class="toolkit-item"><span>SKETCHUP</span><small>Concept Modeling</small></div>
+            <div class="toolkit-item"><span>CORONA</span><small>Photoreal Rendering</small></div>
+            <div class="toolkit-item"><span>V-RAY</span><small>Advanced Rendering</small></div>
+            <div class="toolkit-item"><span>D5 RENDER</span><small>Real-Time Visualization</small></div>
+            <div class="toolkit-item"><span>BLENDER</span><small>Asset Development</small></div>
+            <div class="toolkit-item"><span>REVIT</span><small>BIM Coordination</small></div>
+            <div class="toolkit-item"><span>ZBRUSH</span><small>Digital Sculpting</small></div>
+            <div class="toolkit-item"><span>UNREAL ENGINE</span><small>Cinematic Experience</small></div>
+            <div class="toolkit-item"><span>PHOTOSHOP</span><small>Post Production</small></div>
+            <div class="toolkit-item"><span>ILLUSTRATOR</span><small>Graphic Refinement</small></div>
+            <div class="toolkit-item"><span>PREMIERE PRO</span><small>Video Editing</small></div>
+            <div class="toolkit-item"><span>MARVELOUS</span><small>Fabric Simulation</small></div>
+            <div class="toolkit-item"><span>LUMION</span><small>Fast Visualization</small></div>
+            <div class="toolkit-item"><span>MUDBOX</span><small>Surface Detailing</small></div>
+
+            <div class="toolkit-item"><span>3DS MAX</span><small>Architectural Modeling</small></div>
+            <div class="toolkit-item"><span>AUTOCAD</span><small>Technical Drawing</small></div>
+            <div class="toolkit-item"><span>SKETCHUP</span><small>Concept Modeling</small></div>
+            <div class="toolkit-item"><span>CORONA</span><small>Photoreal Rendering</small></div>
+            <div class="toolkit-item"><span>V-RAY</span><small>Advanced Rendering</small></div>
+            <div class="toolkit-item"><span>D5 RENDER</span><small>Real-Time Visualization</small></div>
+            <div class="toolkit-item"><span>BLENDER</span><small>Asset Development</small></div>
+            <div class="toolkit-item"><span>REVIT</span><small>BIM Coordination</small></div>
+            <div class="toolkit-item"><span>ZBRUSH</span><small>Digital Sculpting</small></div>
+            <div class="toolkit-item"><span>UNREAL ENGINE</span><small>Cinematic Experience</small></div>
+            <div class="toolkit-item"><span>PHOTOSHOP</span><small>Post Production</small></div>
+            <div class="toolkit-item"><span>ILLUSTRATOR</span><small>Graphic Refinement</small></div>
+            <div class="toolkit-item"><span>PREMIERE PRO</span><small>Video Editing</small></div>
+            <div class="toolkit-item"><span>MARVELOUS</span><small>Fabric Simulation</small></div>
+            <div class="toolkit-item"><span>LUMION</span><small>Fast Visualization</small></div>
+            <div class="toolkit-item"><span>MUDBOX</span><small>Surface Detailing</small></div>
+        </div>
+    </div>
+</div>
+        <div class="basa-don-alani" id="basaDonBtnPractice">
+            <span class="basa-don-metin">BACK TO TOP</span>
+            <div class="basa-don-nokta"></div>
+        </div>
+    </div>
+
+
+   <footer class="about-footer-yeni"> 
+    <div class="f-yeni-icerik">
+       <div class="f-sosyal">
+
+    <a href="https://www.instagram.com/garantidesigncom/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61584720006828"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-facebook-f"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://www.youtube.com/@GarantiDesign"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-youtube"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://x.com/garantidesignco"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 512 512"
+             style="width: 14px; height: 14px; fill: currentColor; vertical-align: middle;">
+            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+        </svg>
+        <span class="aktif-nokta"></span>
+    </a>
+
+</div>
+
+        <div class="f-telif" id="footer-telif-practice"> &copy; 2016 Garanti Design. All Rights Reserved. </div> 
+
+ <div class="f-yasal-alan">
+
+    <a href="#" class="yasal-link legal-link" data-legal="terms">
+        <span id="yasal-sartlar">Terms and Conditions</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <span class="ayrac">|</span>
+
+    <a href="#" class="yasal-link legal-link" data-legal="privacy">
+        <span id="yasal-gizlilik">Privacy Policy</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <span class="ayrac">|</span>
+
+    <a href="#" class="yasal-link legal-link" data-legal="cookie">
+        <span id="yasal-cerez">Cookie Policy</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+</div>
+    </div>
+</footer>
+</section>
+
+
+    
+<section class="contact-sahne sayfa-gizli" id="iletisimSayfasi">
+    <div class="contact-master-konteyner">
+
+        <div class="contact-sol-blok">
+            <div class="contact-baslik-alani">
+                <span class="contact-ust-etiket" id="c-etiket">CONTACT</span>
+                <h2 id="c-ana-baslik">DESIGNING THE UNBUILT.</h2>
+                <div class="contact-cizgi"></div>
+            </div>
+
+            <div class="contact-bilgi-kartlari-grubu">
+
+                <div class="c-bilgi-kart">
+                    <div class="c-kart-ikon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="c-kart-yazi">
+                        <span id="c-kart-tel-baslik">TELEFON</span>
+                        <a href="tel:+905376237201">+90 (537) 623 72 01</a>
+                    </div>
+                </div>
+
+                <div class="c-bilgi-kart">
+                    <div class="c-kart-ikon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="c-kart-yazi">
+                        <span id="c-kart-mail-baslik">E-MAIL</span>
+                        <a href="mailto:info@garantidesign.com">info@garantidesign.com</a>
+                    </div>
+                </div>
+
+                <div class="c-bilgi-kart">
+                    <div class="c-kart-ikon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="c-kart-yazi">
+                        <span id="c-kart-ist-baslik">İSTANBUL OFİS</span>
+                        <p id="c-kart-ist-adres">Eyüpsultan Mah. Zulal Sk. No:10/D A220 Sancaktepe, İstanbul</p>
+                    </div>
+                </div>
+
+                <div class="c-bilgi-kart">
+                    <div class="c-kart-ikon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="c-kart-yazi">
+                        <span id="c-kart-duzce-baslik">DÜZCE OFİS</span>
+                        <p id="c-kart-duzce-adres">Camikebir Mah. Mehmet Gösterişli Sk. No:1 Kat:1 Daire:6 Merkez, Düzce</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="contact-sag-blok">
+            
+            <form class="contact-premium-form"
+            action="https://formsubmit.co/maliozt34@gmail.com"
+            method="POST">
+                <div class="form-grup">
+                    <input type="text"
+       id="form-isim"
+       name="Ad Soyad"
+       required
+       placeholder=" ">
+                    <label for="form-isim" id="lbl-isim">YOUR NAME</label>
+                    <div class="input-cizgi"></div>
+                </div>
+
+                <div class="form-grup">
+                    <input type="email"
+       id="form-email"
+       name="E-posta"
+       required
+       placeholder=" ">
+                    <label for="form-email" id="lbl-email">YOUR E-MAIL</label>
+                    <div class="input-cizgi"></div>
+                </div>
+
+                <div class="form-grup">
+                    <input type="text"
+       id="form-konu"
+       name="Proje Türü"
+       required
+       placeholder=" ">
+                    <label for="form-konu" id="lbl-konu">PROJECT TYPE (e.g. Villa Render, Landscape)</label>
+                    <div class="input-cizgi"></div>
+                </div>
+
+                <div class="form-grup">
+                    <textarea id="form-mesaj"
+          name="Proje Özeti"
+          required
+          placeholder=" "
+          rows="4"></textarea>
+                    <label for="form-mesaj" id="lbl-mesaj">PROJECT BRIEF & DETAILS</label>
+                    <div class="input-cizgi"></div>
+                </div>
+                <input type="hidden" name="_subject" value="Yeni Proje Brief Talebi - Garanti Design">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+
+               <button type="submit" class="btn-form-gonder">
+    <span id="btn-gonder-metin">SEND BRIEF</span>
+    <div class="btn-isik"></div>
+</button>
+            </form>
+        </div>
+
+        <div class="contact-global-sosyal-bar">
+            <span class="c-global-sosyal-etiket">KANALLARIMIZLA BAĞLANTI KURUN</span>
+            <div class="c-global-cizgi"></div>
+
+            <div class="c-global-sosyal-ikonlar">
+                <a href="https://www.instagram.com/garantidesigncom/" target="_blank" rel="noopener noreferrer" class="c-global-sosyal-link">
+                    <i class="fa-brands fa-instagram"></i><span class="aktif-nokta"></span>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61584720006828" target="_blank" rel="noopener noreferrer" class="c-global-sosyal-link">
+                    <i class="fa-brands fa-facebook-f"></i><span class="aktif-nokta"></span>
+                </a>
+
+                <a href="https://www.youtube.com/@GarantiDesign" target="_blank" rel="noopener noreferrer" class="c-global-sosyal-link">
+                    <i class="fa-brands fa-youtube"></i><span class="aktif-nokta"></span>
+                </a>
+
+                <a href="https://x.com/garantidesignco" target="_blank" rel="noopener noreferrer" class="c-global-sosyal-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:15px;height:15px;fill:currentColor;">
+                        <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+                    </svg>
+                    <span class="aktif-nokta"></span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact-harita-bolumu">
+        <div id="premiumMap"></div>
+    </div>
+
+    <div class="basa-don-alani" id="basaDonBtnContact">
+        <span class="basa-don-metin">BACK TO TOP</span>
+        <div class="basa-don-nokta"></div>
+    </div>
+
+    <footer class="about-footer-yeni"> 
+        <div class="f-yeni-icerik">
+           <div class="f-sosyal">
+
+    <a href="https://www.instagram.com/garantidesigncom/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-instagram"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61584720006828"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-facebook-f"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://www.youtube.com/@GarantiDesign"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <i class="fa-brands fa-youtube"></i>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <a href="https://x.com/garantidesignco"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="f-sosyal-link">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 512 512"
+             style="width: 14px; height: 14px; fill: currentColor; vertical-align: middle;">
+            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+        </svg>
+        <span class="aktif-nokta"></span>
+    </a>
+
+</div>
+
+            <div class="f-telif" id="footer-telif-contact">&copy; 2016 Garanti Design. All Rights Reserved.</div> 
+<div class="f-yasal-alan">
+
+    <a href="#" class="yasal-link legal-link" data-legal="terms">
+        <span id="yasal-sartlar">Terms and Conditions</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <span class="ayrac">|</span>
+
+    <a href="#" class="yasal-link legal-link" data-legal="privacy">
+        <span id="yasal-gizlilik">Privacy Policy</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+    <span class="ayrac">|</span>
+
+    <a href="#" class="yasal-link legal-link" data-legal="cookie">
+        <span id="yasal-cerez">Cookie Policy</span>
+        <span class="aktif-nokta"></span>
+    </a>
+
+</div>
+        </div>
+    </footer>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script type="module" src="assets/js/main.js"></script>
+<!-- ================================================= -->
+<!-- LEGAL MODAL -->
+<!-- ================================================= -->
+
+<div class="legal-modal" id="legalModal">
+
+    <div class="legal-overlay" id="legalOverlay"></div>
+
+    <div class="legal-panel">
+
+        <button class="legal-close" id="legalClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <span class="legal-kategori">GARANTI DESIGN</span>
+
+        <h2 id="legalTitle">
+            Terms & Conditions
+        </h2>
+
+        <div class="legal-content" id="legalContent">
+            Content will load here...
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

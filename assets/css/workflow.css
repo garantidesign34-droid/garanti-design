@@ -1,0 +1,821 @@
+/* ========================================================================== 
+   GARANTI DESIGN - FINAL WORKFLOW.CSS / 7 STEP VERSION
+   ========================================================================== */
+
+#isAkisiSayfasi {
+    background-color: #141518 !important;
+}
+
+.workflow-timeline-alani,
+.client-journey-alani {
+    margin-bottom: 90px;
+}
+
+#isAkisiSayfasi .workflow-quality {
+    margin-bottom: 50px;
+}
+
+/* CLIENT JOURNEY - 7 STEP PREMIUM LINE */
+.client-journey-map {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(105px, 1fr));
+    gap: 22px;
+    max-width: 1180px;
+    margin: 55px auto 0 auto;
+    position: relative;
+    isolation: isolate;
+}
+
+.journey-step {
+    position: relative;
+    min-height: 135px;
+    padding: 18px 16px;
+    background: linear-gradient(145deg, #1c1e22, #16171a);
+    border: 1px solid rgba(204, 164, 106, 0.16);
+    border-radius: 10px 6px 12px 5px;
+    overflow: visible;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.015);
+    transition:
+        transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+.journey-step:nth-child(odd) {
+    transform: rotate(-0.25deg);
+}
+
+.journey-step:nth-child(even) {
+    transform: rotate(0.25deg);
+}
+
+.journey-step:hover {
+    transform: rotate(0deg) translateY(-5px);
+    border-color: rgba(204,164,106,0.28);
+    box-shadow: 0 12px 24px rgba(204,164,106,0.05);
+}
+
+.journey-step::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 22px;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        rgba(204,164,106,0.25),
+        rgba(204,164,106,1),
+        rgba(204,164,106,0.25)
+    );
+    opacity: 0.85;
+    filter: drop-shadow(0 0 3px rgba(204,164,106,0.16));
+    pointer-events: none;
+}
+
+.journey-step:nth-child(7)::before {
+    display: none !important;
+}
+
+.journey-step::after {
+    display: none !important;
+}
+
+.journey-step span {
+    display: none;
+}
+
+.journey-step i {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+    color: #cca46a;
+    border: 1px dashed rgba(204,164,106,0.35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 13px;
+    opacity: 0.85;
+}
+
+.journey-step h4 {
+    font-size: 12.5px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+}
+
+.journey-step p {
+    font-size: 11px;
+    color: #8c929a;
+    line-height: 1.55;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* PROJECT COMPLETE */
+.journey-complete-node {
+    width: 320px;
+    margin: 55px auto 85px auto;
+    text-align: center;
+    position: relative;
+}
+
+.journey-complete-node::before {
+    content: "";
+    position: absolute;
+    top: -42px;
+    left: 50%;
+    width: 2px;
+    height: 42px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+        180deg,
+        rgba(204,164,106,0.25),
+        rgba(204,164,106,1),
+        rgba(204,164,106,0.25)
+    );
+}
+
+.complete-orb {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 22px auto;
+    border-radius: 50%;
+    border: 1px solid rgba(204,164,106,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cca46a;
+    font-size: 24px;
+    animation: completePulse 4s ease-in-out infinite;
+}
+
+@keyframes completePulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow:
+            0 0 26px rgba(204,164,106,0.08),
+            inset 0 0 18px rgba(204,164,106,0.04);
+    }
+
+    50% {
+        transform: scale(1.035);
+        box-shadow:
+            0 0 38px rgba(204,164,106,0.16),
+            inset 0 0 24px rgba(204,164,106,0.07);
+    }
+}
+
+.journey-complete-node span {
+    display: block;
+    color: #cca46a;
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.journey-complete-node p {
+    color: #8c929a;
+    font-size: 12px;
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* STUDIO TOOLKIT - PREMIUM TYPOGRAPHIC FLOW */
+.workflow-software-seksiyonu {
+    margin-bottom: 50px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 10px 0 0;
+}
+
+.workflow-software-seksiyonu::before,
+.workflow-software-seksiyonu::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 16%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.workflow-software-seksiyonu::before {
+    left: 0;
+    background: linear-gradient(90deg, #141518, transparent);
+}
+
+.workflow-software-seksiyonu::after {
+    right: 0;
+    background: linear-gradient(-90deg, #141518, transparent);
+}
+
+.toolkit-akis {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.toolkit-serit {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    width: max-content;
+    animation: toolkitAkis 48s linear infinite;
+}
+
+.toolkit-serit:hover {
+    animation-play-state: paused;
+}
+
+.toolkit-item {
+    min-width: 230px;
+    height: 92px;
+    padding: 0 30px;
+    border-left: 1px solid rgba(204,164,106,0.24);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    opacity: 0.62;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.toolkit-item::before {
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    background: #cca46a;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 16px rgba(204,164,106,0.28);
+}
+
+.toolkit-item span {
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.toolkit-item small {
+    margin-top: 14px;
+    color: #cca46a;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.toolkit-item:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.toolkit-item:hover span {
+    color: #cca46a;
+}
+
+@keyframes toolkitAkis {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .client-journey-map {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .journey-step:nth-child(4)::before {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .client-journey-map {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .journey-step::before {
+        display: none !important;
+    }
+
+    .toolkit-serit {
+        gap: 22px;
+        animation-duration: 34s;
+    }
+
+    .toolkit-item {
+        min-width: 190px;
+        height: 82px;
+        padding: 0 24px;
+    }
+
+    .toolkit-item span {
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+
+    .toolkit-item small {
+        font-size: 9px;
+    }
+}
+
+/* WORKFLOW FOOTER FULL WIDTH FIX */
+#isAkisiSayfasi .about-footer-yeni {
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    margin-top: 20px !important;
+}
+
+#isAkisiSayfasi .about-footer-yeni .f-yeni-icerik {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 10% !important;
+}
+
+/* WORKFLOW FOOTER GAP FIX - ABOUT İLE UYUMLU */
+#isAkisiSayfasi .workflow-konteyner {
+    min-height: auto !important;
+    padding-bottom: 0 !important;
+}
+
+#isAkisiSayfasi .workflow-software-seksiyonu {
+    margin-bottom: 20px !important;
+    padding-bottom: 0 !important;
+}
+
+#isAkisiSayfasi .toolkit-akis {
+    margin-bottom: 0px !important;
+}
+
+/* ==========================================================================
+   WORKFLOW BACK TO TOP FIX
+   ========================================================================== */
+
+#basaDonBtnPractice {
+    position: fixed !important;
+    right: 4% !important;
+    bottom: 50px !important;
+    z-index: 999999 !important;
+
+    display: flex !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(20px) !important;
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease !important;
+}
+
+#basaDonBtnPractice.nokta-aktif {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+}
+
+body:not(:has(#isAkisiSayfasi:not(.sayfa-gizli))) #basaDonBtnPractice {
+    display: none !important;
+}
+
+body:has(#isAkisiSayfasi:not(.sayfa-gizli)) #basaDonBtnPractice {
+    display: flex !important;
+}
+/* ================================================= */
+/* WORKFLOW SECTION SPACING BALANCE FIX */
+/* ================================================= */
+
+#isAkisiSayfasi .client-journey-alani {
+    margin-bottom: 125px !important;
+}
+
+#isAkisiSayfasi .journey-complete-node {
+    margin: 70px auto 115px auto !important;
+}
+
+#isAkisiSayfasi .workflow-quality {
+    margin-top: 0 !important;
+    margin-bottom: 115px !important;
+}
+
+#isAkisiSayfasi .workflow-quality .about-seksiyon-baslik {
+    margin-bottom: 65px !important;
+}
+
+#isAkisiSayfasi .workflow-quality .ilke-kartlar {
+    gap: 95px !important;
+}
+
+#isAkisiSayfasi .workflow-software-seksiyonu {
+    margin-top: 25px !important;
+    margin-bottom: 20px !important;
+    padding-top: 0 !important;
+}
+
+#isAkisiSayfasi .toolkit-akis {
+    margin-top: 25px !important;
+    margin-bottom: 20px !important;
+}
+/* ==========================================================================
+   WORKFLOW MOBILE FINAL - ABOUT MOBILE İKİZİ
+   Desktop'a dokunmaz
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    #isAkisiSayfasi {
+        overflow-x: hidden !important;
+    }
+
+    #isAkisiSayfasi .workflow-konteyner {
+        width: 100% !important;
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Genel section nefesi */
+    #isAkisiSayfasi .client-journey-alani {
+        margin-top: 0 !important;
+        margin-bottom: 78px !important;
+    }
+
+    #isAkisiSayfasi .about-seksiyon-baslik {
+        margin-bottom: 38px !important;
+        text-align: center !important;
+    }
+
+    #isAkisiSayfasi .about-seksiyon-baslik span {
+        font-size: 10px !important;
+        letter-spacing: 3px !important;
+    }
+
+    #isAkisiSayfasi .about-seksiyon-baslik h3 {
+        font-size: 24px !important;
+        line-height: 1.18 !important;
+        letter-spacing: 1px !important;
+    }
+
+    #isAkisiSayfasi .about-seksiyon-baslik p {
+        font-size: 13px !important;
+        line-height: 1.7 !important;
+        max-width: 330px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Client Journey - mobilde temiz kart akışı */
+    #isAkisiSayfasi .client-journey-map {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        max-width: 420px !important;
+        margin: 34px auto 0 auto !important;
+    }
+
+    #isAkisiSayfasi .journey-step {
+        min-height: auto !important;
+        padding: 20px 20px 18px !important;
+        border-radius: 14px !important;
+        transform: none !important;
+    }
+
+    #isAkisiSayfasi .journey-step:nth-child(odd),
+    #isAkisiSayfasi .journey-step:nth-child(even) {
+        transform: none !important;
+    }
+
+    #isAkisiSayfasi .journey-step:hover {
+        transform: translateY(-3px) !important;
+    }
+
+    #isAkisiSayfasi .journey-step::before,
+    #isAkisiSayfasi .journey-step::after {
+        display: none !important;
+    }
+
+    #isAkisiSayfasi .journey-step i {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 15px !important;
+        margin-bottom: 14px !important;
+    }
+
+    #isAkisiSayfasi .journey-step h4 {
+        font-size: 13px !important;
+        line-height: 1.35 !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 8px !important;
+    }
+
+    #isAkisiSayfasi .journey-step p {
+        font-size: 12px !important;
+        line-height: 1.65 !important;
+    }
+
+    /* Project Complete */
+    #isAkisiSayfasi .journey-complete-node {
+        width: 100% !important;
+        max-width: 330px !important;
+        margin: 54px auto 82px auto !important;
+    }
+
+    #isAkisiSayfasi .journey-complete-node::before {
+        top: -34px !important;
+        height: 34px !important;
+    }
+
+    #isAkisiSayfasi .complete-orb {
+        width: 66px !important;
+        height: 66px !important;
+        font-size: 21px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #isAkisiSayfasi .journey-complete-node span {
+        font-size: 10px !important;
+        letter-spacing: 4px !important;
+        margin-bottom: 10px !important;
+    }
+
+    #isAkisiSayfasi .journey-complete-node p {
+        font-size: 12px !important;
+        line-height: 1.7 !important;
+        max-width: 300px !important;
+    }
+
+    /* Quality Control - About İlkeler mantığı */
+    #isAkisiSayfasi .workflow-quality {
+        margin-top: 0 !important;
+        margin-bottom: 82px !important;
+    }
+
+    #isAkisiSayfasi .workflow-quality .about-seksiyon-baslik {
+        margin-bottom: 38px !important;
+    }
+
+    #isAkisiSayfasi .workflow-quality .ilke-kartlar {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+        max-width: 420px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #isAkisiSayfasi .workflow-quality .ilke-kart {
+        min-height: 150px !important;
+        padding: 22px 16px !important;
+        border-radius: 14px !important;
+    }
+
+    #isAkisiSayfasi .workflow-quality .ilke-kart i {
+        font-size: 20px !important;
+        margin-bottom: 14px !important;
+    }
+
+    #isAkisiSayfasi .workflow-quality .ilke-kart h4 {
+        font-size: 12px !important;
+        line-height: 1.35 !important;
+        letter-spacing: 1px !important;
+    }
+
+    #isAkisiSayfasi .workflow-quality .ilke-kart p {
+        font-size: 11px !important;
+        line-height: 1.55 !important;
+    }
+
+    /* Studio Toolkit */
+    #isAkisiSayfasi .workflow-software-seksiyonu {
+        margin-top: 0 !important;
+        margin-bottom: 42px !important;
+        padding-top: 0 !important;
+    }
+
+    #isAkisiSayfasi .toolkit-akis {
+        margin-top: 28px !important;
+        margin-bottom: 0 !important;
+    }
+
+    #isAkisiSayfasi .toolkit-serit {
+        gap: 18px !important;
+        animation-duration: 34s !important;
+    }
+
+    #isAkisiSayfasi .toolkit-item {
+        min-width: 176px !important;
+        height: 78px !important;
+        padding: 0 22px !important;
+    }
+
+    #isAkisiSayfasi .toolkit-item span {
+        font-size: 14px !important;
+        letter-spacing: 2.5px !important;
+    }
+
+    #isAkisiSayfasi .toolkit-item small {
+        margin-top: 11px !important;
+        font-size: 8px !important;
+        letter-spacing: 1.8px !important;
+    }
+
+    /* Footer - About mobil ikizi */
+    #isAkisiSayfasi .about-footer-yeni {
+        width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        margin-top: 35px !important;
+        padding: 28px 0 26px !important;
+    }
+
+    #isAkisiSayfasi .about-footer-yeni .f-yeni-icerik {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 22px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 18px !important;
+        text-align: center !important;
+    }
+
+    #isAkisiSayfasi .f-sosyal {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 18px !important;
+        order: 1 !important;
+    }
+
+    #isAkisiSayfasi .f-sosyal-link {
+        width: 34px !important;
+        height: 34px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    #isAkisiSayfasi .f-telif {
+        order: 2 !important;
+        font-size: 10px !important;
+        line-height: 1.6 !important;
+        letter-spacing: 1.2px !important;
+        text-align: center !important;
+    }
+
+    #isAkisiSayfasi .f-yasal-alan {
+        order: 3 !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+        font-size: 10px !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+    }
+
+    #isAkisiSayfasi .f-yasal-alan .ayrac {
+        opacity: 0.35 !important;
+    }
+
+    /* Başa dön butonu - mobil */
+    #basaDonBtnPractice {
+        right: 22px !important;
+        bottom: 28px !important;
+        transform: translateY(16px) !important;
+    }
+
+    #basaDonBtnPractice.nokta-aktif {
+        transform: translateY(0) !important;
+    }
+}
+@media (max-width: 768px) {
+
+    #isAkisiSayfasi .client-journey-map {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    #isAkisiSayfasi .journey-step {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+/* WORKFLOW MOBILE - CLIENT JOURNEY NET GENİŞLİK FIX */
+@media (max-width: 768px) {
+    #isAkisiSayfasi .client-journey-map {
+        width: calc(100vw - 70px) !important;
+        max-width: calc(100vw - 70px) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    #isAkisiSayfasi .journey-step {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+/* WORKFLOW MOBILE - CLIENT JOURNEY CENTER FIX */
+@media (max-width: 768px) {
+    #isAkisiSayfasi .client-journey-map {
+        width: 100% !important;
+        max-width: 340px !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        justify-content: center !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    #isAkisiSayfasi .journey-step {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+    }
+}
+/* WORKFLOW MOBILE - ANA KONTEYNER ORTALAMA FIX */
+@media (max-width: 768px) {
+    #isAkisiSayfasi .about-konteyner.workflow-konteyner {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+        box-sizing: border-box !important;
+    }
+
+    #isAkisiSayfasi .client-journey-alani {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    #isAkisiSayfasi .client-journey-map {
+        width: 100% !important;
+        max-width: 320px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+/* WORKFLOW MOBILE - CLIENT JOURNEY FINAL CENTER ALIGN */
+@media (max-width: 768px) {
+
+    #isAkisiSayfasi .client-journey-map {
+        width: 300px !important;
+        max-width: 300px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        transform: translateX(-14px) !important;
+    }
+
+    #isAkisiSayfasi .journey-step {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+/* WORKFLOW MOBILE - STUDIO TOOLKIT ÜST BOŞLUK FIX */
+@media (max-width: 768px) {
+
+    #isAkisiSayfasi .workflow-software-seksiyonu {
+        margin-top: -40px !important;
+        padding-top: 0 !important;
+    }
+
+    #isAkisiSayfasi .toolkit-akis {
+        margin-top: 0 !important;
+    }
+
+}

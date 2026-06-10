@@ -1,0 +1,530 @@
+/* ================================================= */
+/* PREMIUM PROJECT CATEGORY SWITCH */
+/* ================================================= */
+
+.projects-kategori-switch {
+    width: fit-content;
+    margin: 64px auto 84px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 46px;
+
+    position: relative;
+}
+
+.projects-kategori-switch::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+
+    width: 420px;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(204,164,106,.18),
+        rgba(204,164,106,.5),
+        rgba(204,164,106,.18),
+        transparent
+    );
+
+    transform: translateX(-50%);
+    opacity: .65;
+}
+
+.project-tab {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+
+    background: transparent;
+    border: none;
+
+    color: rgba(176,181,188,.72);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 3.4px;
+    text-transform: uppercase;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    transition:
+        color .4s cubic-bezier(.25,1,.5,1),
+        transform .4s cubic-bezier(.25,1,.5,1);
+}
+
+.project-tab:hover {
+    color: #cca46a;
+    transform: translateY(-2px);
+}
+
+.project-tab.aktif-tab {
+    color: #cca46a;
+}
+
+.project-dot {
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background-color: rgba(255,255,255,.25);
+
+    align-self: flex-start;
+
+    transition:
+        background-color .4s cubic-bezier(.25,1,.5,1),
+        transform .4s cubic-bezier(.25,1,.5,1),
+        box-shadow .4s cubic-bezier(.25,1,.5,1);
+}
+
+.project-tab:hover .project-dot {
+    background-color: #cca46a;
+    transform: translateX(8px);
+    box-shadow: 0 0 8px #cca46a;
+}
+
+.project-tab.aktif-tab .project-dot {
+    background-color: #cca46a;
+    box-shadow: 0 0 8px #cca46a;
+}
+/* ================================================= */
+/* PROJECTS HARD POSITION FIX */
+/* ================================================= */
+
+
+#projectsSayfasi {
+    min-height: 100vh !important;
+    width: 100% !important;
+    padding: 160px 40px 0px !important;
+    box-sizing: border-box !important;
+    background: #050505 !important;
+    color: #fff !important;
+}
+
+#projectsSayfasi .projects-konteyner {
+    max-width: 1400px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+#projectsSayfasi .projects-hero {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+}
+
+#projectsSayfasi .projects-etiket {
+    display: block !important;
+    margin-bottom: 16px !important;
+    color: #cca46a !important;
+    font-size: 11px !important;
+    font-weight: 300 !important;
+    letter-spacing: 4px !important;
+    text-transform: uppercase !important;
+}
+
+#projectsSayfasi .projects-baslik {
+    margin: 0 0 22px !important;
+    font-size: 46px !important;
+    font-weight: 200 !important;
+    letter-spacing: 6px !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+}
+
+#projectsSayfasi .projects-aciklama {
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    color: rgba(255,255,255,.68) !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+    line-height: 1.9 !important;
+    text-align: center !important;
+}
+
+#projectsSayfasi .projects-kategori-switch {
+    width: fit-content !important;
+    margin: 48px auto 84px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+/* Hero */
+
+/* Filter Bar */
+
+/* Project Grid */
+.projects-grid-wrapper {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.projects-grid {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.projects-grid.aktif-grid {
+    display: grid;
+}
+
+/* Project Card */
+.project-card {
+    position: relative;
+    height: 560px;
+    overflow: hidden;
+    border-radius: 2px;
+    background: rgba(255,255,255,.025);
+    cursor: pointer;
+    border: 1px solid rgba(204,164,106,.08);
+
+    transition:
+        transform .75s cubic-bezier(.22,1,.36,1),
+        border-color .75s cubic-bezier(.22,1,.36,1);
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.72) 0%,
+            rgba(0,0,0,.42) 42%,
+            rgba(0,0,0,.08) 100%
+        );
+    opacity: 0;
+    transition: opacity .7s cubic-bezier(.22,1,.36,1);
+    z-index: 1;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(204,164,106,.24);
+}
+
+.project-card:hover::after {
+    opacity: 1;
+}
+
+.project-card img,
+.project-card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: scale(1.01);
+
+    transition:
+        transform .95s cubic-bezier(.22,1,.36,1),
+        filter .95s cubic-bezier(.22,1,.36,1);
+}
+
+.project-card img {
+    object-fit: cover;
+}
+
+.project-card-placeholder {
+    background:
+        linear-gradient(135deg, rgba(255,255,255,.035), rgba(255,255,255,.008)),
+        radial-gradient(circle at center, rgba(204,164,106,.07), transparent 65%);
+}
+
+.project-card:hover img,
+.project-card:hover .project-card-placeholder {
+    transform: scale(1.035);
+    filter: brightness(.58) contrast(1.05);
+}
+
+.project-card-info {
+    position: absolute;
+    left: 50%;
+    bottom: 76px;
+    width: 82%;
+    text-align: center;
+    z-index: 2;
+
+    opacity: 0;
+    transform: translateX(-50%) translateY(16px);
+
+    transition:
+        opacity .7s cubic-bezier(.22,1,.36,1),
+        transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+.project-card:hover .project-card-info {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.project-card-info span {
+    display: block;
+    margin-bottom: 14px;
+    color: #cca46a;
+    font-size: 9.5px;
+    font-weight: 400;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+}
+
+.project-card-info h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+}
+
+.project-card-meta {
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.project-card-meta small {
+    color: rgba(255,255,255,.62);
+    font-size: 8.5px;
+    font-weight: 300;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+}
+
+/* Project Detail */
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transform: scale(1.01);
+
+    transition:
+        transform .9s cubic-bezier(.22,1,.36,1),
+        filter .9s cubic-bezier(.22,1,.36,1);
+}
+
+.project-card:hover img {
+    transform: scale(1.04);
+    filter: brightness(.62) contrast(1.05);
+}
+.project-card img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+
+    transform: scale(1.01);
+
+    transition:
+        transform .9s cubic-bezier(.22,1,.36,1),
+        filter .9s cubic-bezier(.22,1,.36,1);
+}
+
+.project-card:hover img {
+    transform: scale(1.04);
+    filter: brightness(.62) contrast(1.05);
+}
+/* Project Detail */
+
+/* Animations */
+/* ================================================= */
+
+/* Hero */
+#projectsSayfasi .basa-don-alani {
+    z-index: 9999 !important;
+}
+/* Filter Bar */
+
+/* Project Grid */
+
+/* Project Card */
+
+/* Project Detail */
+
+/* Animations */
+/* ================================================= */
+/* PROJECTS BAŞA DÖN CLICK FIX */
+/* ================================================= */
+
+#projectsSayfasi .basa-don-alani,
+#projectsSayfasi #basaDonBtnProjects,
+#projectsSayfasi #basaDonBtnProjects *,
+#projectsSayfasi .basa-don-metin {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+
+
+#projectsSayfasi .projects-grid-wrapper,
+#projectsSayfasi .projects-grid,
+#projectsSayfasi .project-card {
+    position: relative;
+    z-index: 1;
+}
+/* PROJECTS FOOTER ANIMATION FIX */
+#projectsSayfasi .f-sosyal-link:hover,
+#projectsSayfasi .yasal-link:hover {
+    color: #cca46a !important;
+}
+
+#projectsSayfasi .f-sosyal-link:hover .aktif-nokta,
+#projectsSayfasi .yasal-link:hover .aktif-nokta {
+    background-color: #cca46a !important;
+    transform: translateX(8px) !important;
+    box-shadow: 0 0 6px #cca46a !important;
+}
+@media (max-width: 520px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+/* ==========================================================================
+   PROJECTS MOBILE FINAL - ABOUT / WORKFLOW İKİZİ
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    #projectsSayfasi {
+        overflow-x: hidden !important;
+    }
+
+    #projectsSayfasi .projects-konteyner {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+        box-sizing: border-box !important;
+    }
+
+    #projectsSayfasi .projects-hero {
+        padding-top: 120px !important;
+        margin-bottom: 48px !important;
+        text-align: left !important;
+    }
+
+    #projectsSayfasi .projects-hero span {
+        font-size: 10px !important;
+        letter-spacing: 3px !important;
+    }
+
+    #projectsSayfasi .projects-hero h2 {
+        font-size: 30px !important;
+        line-height: 1.15 !important;
+        letter-spacing: 2px !important;
+    }
+
+    #projectsSayfasi .projects-hero p {
+        font-size: 12px !important;
+        line-height: 1.75 !important;
+        max-width: 330px !important;
+    }
+
+    #projectsSayfasi .projects-kategori-switch {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin: 0 auto 42px auto !important;
+        width: 100% !important;
+        max-width: 330px !important;
+    }
+
+    #projectsSayfasi .project-tab {
+        width: 100% !important;
+        min-height: 46px !important;
+        font-size: 10px !important;
+        letter-spacing: 2px !important;
+        text-align: center !important;
+    }
+
+    #projectsSayfasi .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    #projectsSayfasi .project-card {
+        height: 430px !important;
+        border-radius: 14px !important;
+    }
+
+    #projectsSayfasi .project-info {
+        padding: 24px 20px !important;
+    }
+
+    #projectsSayfasi .project-info span {
+        font-size: 10px !important;
+        letter-spacing: 2px !important;
+    }
+
+    #projectsSayfasi .project-info h3 {
+        font-size: 20px !important;
+        line-height: 1.2 !important;
+    }
+
+    #projectsSayfasi .project-meta {
+        font-size: 10px !important;
+        letter-spacing: 1px !important;
+    }
+
+    #basaDonBtnProjects {
+        right: 22px !important;
+        bottom: 28px !important;
+    }
+}
+@media (max-width: 768px) {
+
+    #projectsSayfasi .projects-hero {
+        padding-top: 0px !important;
+        margin-bottom: 30px !important;
+    }
+}
+/* PROJECTS MOBILE - FILTER YAN YANA */
+@media (max-width: 768px) {
+
+    #projectsSayfasi .projects-kategori-switch {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 12px !important;
+        flex-wrap: nowrap !important;
+        margin-bottom: 28px !important;
+        max-width: 100% !important;
+    }
+
+    #projectsSayfasi .project-tab {
+        width: auto !important;
+        min-height: auto !important;
+        padding: 0 !important;
+        font-size: 9px !important;
+        letter-spacing: 1.5px !important;
+        white-space: nowrap !important;
+        flex: none !important;
+    }
+
+}

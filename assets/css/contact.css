@@ -1,0 +1,710 @@
+/* ==========================================================================
+   📞 GARANTI DESIGN - PREMIUM CONTACT SYSTEM & LINES
+   ========================================================================== */
+
+/* Ana Sahne Yapısı - Mevcut SPA Yerleşimine %100 Sadık */
+.contact-sahne {
+    min-height: calc(100vh - 156px);
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    background: #111315; /* About & Workflow ile aynı */
+}
+
+/* Master İki Sütunlu Konteyner */
+.contact-master-konteyner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 10% 40px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Sol ve Sağ olarak tam 2'ye bölme */
+    gap: 100px; /* Bloklar arası ideal lüks mesafe */
+    box-sizing: border-box;
+    align-items: stretch; /* 🚨 İki sütunun da dış iskelet boyunu milimetrik eşitler kanka */
+}
+
+/* 📜 SOL BLOK: VURGULU SÖZ VE OFİS ADRESLERİ */
+.contact-sol-blok {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.contact-sol-blok .contact-baslik-alani .contact-ust-etiket {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #cca46a; /* Bronz premium vurgu */
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.contact-sol-blok .contact-baslik-alani h2 {
+    font-size: 32px;
+    font-weight: 300; /* Minimalist Montserrat asareti */
+    letter-spacing: 4px;
+    line-height: 1.3;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Kısa ve Vurgulu Söz Alanı */
+.contact-cizgi {
+    width: 60px;
+    height: 1px;
+    background-color: rgba(204, 164, 106, 0.4);
+    margin: 30px 0;
+}
+
+.contact-manifesto-metin {
+    color: #b0b5bc;
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    max-width: 480px;
+    margin: 0 0 35px 0;
+}
+
+/* 4 Elemanlı Ofis Adres Kartları Grubu */
+.contact-bilgi-kartlari-grubu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Kartları form elemanlarıyla senkronize etmek için ideal boşluk */
+    margin-top: auto; /* Kendini otomatik olarak en alta, form hizasına çeker */
+}
+
+.c-bilgi-kart {
+    display: flex;
+    align-items: center; /* İkon ve yazıları dikeyde tam ortalar */
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(204, 164, 106, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.c-bilgi-kart:hover {
+    background: rgba(204, 164, 106, 0.04);
+    border-color: rgba(204, 164, 106, 0.3);
+    transform: translateY(-2px);
+}
+
+.c-kart-ikon {
+    font-size: 16px;
+    color: #cca46a;
+}
+
+.c-kart-yazi span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #cca46a;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.c-kart-yazi a, .c-kart-yazi p {
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-decoration: none;
+    margin: 0;
+}
+
+
+/* 🖋️ SAĞ BLOK: PREMIUM BRIEF FORMU */
+.contact-sag-blok {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.contact-premium-form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px; /* Sol taraftaki 4 kart nizamıyla yüksekliği eşitleyen dikey boşluk */
+    height: 100%;
+    justify-content: space-between; /* Form elemanlarını ve butonu kutuya kusursuz dağıtır */
+}
+
+.form-grup {
+    position: relative;
+    width: 100%;
+}
+
+.form-grup input, .form-grup textarea {
+    width: 100%;
+    padding: 12px 0;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.form-grup textarea {
+    resize: none;
+}
+
+.form-grup label {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 11px;
+    letter-spacing: 2px;
+    pointer-events: none;
+    transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Floating Label Animasyonu */
+.form-grup input:focus ~ label,
+.form-grup input:not(:placeholder-shown) ~ label,
+.form-grup textarea:focus ~ label,
+.form-grup textarea:not(:placeholder-shown) ~ label {
+    top: -18px;
+    font-size: 10px;
+    color: #cca46a;
+    letter-spacing: 3px;
+}
+
+/* Alt Çizgilerin Soldan Sağa Uzama Altyapısı */
+.input-cizgi {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Odaklanınca çizgiyi canlandırma sigortası */
+.form-grup input:focus ~ .input-cizgi,
+.form-grup textarea:focus ~ .input-cizgi {
+    background-color: #cca46a;
+    height: 1px;
+    box-shadow: 0 0 8px rgba(204, 164, 106, 0.4);
+}
+
+/* Form Gönder Butonu */
+.btn-form-gonder {
+    position: relative;
+    align-self: flex-start;
+    background: transparent;
+    border: 1px solid rgba(204, 164, 106, 0.5);
+    padding: 16px 45px;
+    cursor: none !important; /* Sitedeki özel mouse halkasını bozmamak için */
+    overflow: hidden;
+    transition: border-color 0.4s ease;
+    margin-top: auto; /* Butonu formun en altına sabitler */
+}
+
+.btn-form-gonder span {
+    color: #cca46a;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+    transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-form-gonder::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background-color: #cca46a;
+    z-index: 1;
+    transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-form-gonder:hover {
+    border-color: #cca46a;
+}
+
+.btn-form-gonder:hover span {
+    color: #1a1c20;
+    font-weight: 500;
+}
+
+.btn-form-gonder:hover::before {
+    left: 0;
+}
+
+/* 🗺️ HARİTA ALANI: YAĞ GİBİ AKAN AKDENİZ AKSI */
+.contact-harita-bolumu {
+    width: 100vw;
+    height: 45vh; /* Formun hemen altında sinematik bir yükseklik kanka */
+    margin-top: auto; /* Footer'ın hemen üstüne yapışması için */
+    border-top: 1px solid rgba(204, 164, 106, 0.15);
+    position: relative;
+    background: #1a1c20;
+}
+
+#premiumMap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Mapbox Harita Üzerindeki Lüks Pin Yapımız */
+.custom-premium-marker {
+    width: 14px;
+    height: 14px;
+    background-color: #cca46a;
+    border: 2px solid #1a1c20;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #cca46a, 0 0 30px rgba(204, 164, 106, 0.6);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-premium-marker:hover {
+    transform: scale(1.4);
+    box-shadow: 0 0 25px #cca46a, 0 0 50px #cca46a;
+}
+
+/* Mapbox Bilgi Balonu (Popup) Premium Özelleştirmesi */
+.mapboxgl-popup-content {
+    background: #24272c !important; /* Üst menü rengiyle tam uyum */
+    color: #ffffff !important;
+    border: 1px solid rgba(204, 164, 106, 0.3);
+    border-radius: 0px !important; /* Brütalist keskin hat kalkanı */
+    padding: 15px 20px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+}
+
+.mapboxgl-popup-content h4 {
+    color: #cca46a;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 0 0 6px 0;
+    font-weight: 500;
+}
+
+.mapboxgl-popup-content p {
+    font-size: 11px;
+    color: #b0b5bc;
+    margin: 0;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.mapboxgl-popup-close-button {
+    color: #cca46a !important;
+    padding: 4px 8px !important;
+    outline: none !important;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip { border-bottom-color: rgba(204, 164, 106, 0.3) !important; }
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip { border-top-color: rgba(204, 164, 106, 0.3) !important; }
+
+/* 📱 RESPONSIVE UYUMLULUK KALKANI */
+@media (max-width: 1024px) {
+    .contact-master-konteyner {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 40px 5%;
+    }
+    .contact-sol-blok .contact-baslik-alani h2 {
+        font-size: 26px;
+    }
+    .contact-harita-bolumu {
+        height: 350px;
+    }
+}
+/* 🗺️ LEAFLET PREMIUM HARİTA AYARLARI */
+.contact-harita-bolumu {
+    width: 100vw;
+    height: 45vh;
+    margin-top: auto;
+    border-top: 1px solid rgba(204, 164, 106, 0.15);
+    position: relative;
+    background: #1a1c20;
+    z-index: 10;
+}
+
+#premiumMap {
+    width: 100%;
+    height: 100%;
+}
+
+/* Leaflet Arka Planını Koru */
+.leaflet-container {
+    background: #1a1c20 !important;
+}
+
+/* Çirkin Leaflet Popup Çerçevelerini İmha Etme Kalkanı */
+.premium-map-popup .leaflet-popup-content-wrapper {
+    background: #24272c !important;
+    border: 1px solid rgba(204, 164, 106, 0.3) !important;
+    border-radius: 0px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    padding: 0px !important;
+}
+
+.premium-map-popup .leaflet-popup-content {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.premium-map-popup .leaflet-popup-tip {
+    background: #24272c !important;
+    border-left: 1px solid rgba(204, 164, 106, 0.3) !important;
+    border-top: 1px solid rgba(204, 164, 106, 0.3) !important;
+}
+
+/* Kapatma Butonunu Bronz Yap */
+.premium-map-popup .leaflet-popup-close-button {
+    color: #cca46a !important;
+    padding: 6px 8px 0 0 !important;
+}
+/* ==========================================================================
+   🗺️ LEAFLET SİNEMATİK HARİTA VE LÜKS BRONZ PİN KALKANI
+   ========================================================================== */
+
+/* Haritanın oturacağı tam genişlikteki ana havuz */
+.contact-harita-bolumu {
+    width: 100% !important;
+    height: 450px !important; /* Yüksekliği net veriyoruz ki tarayıcı ezemesin */
+    margin-top: 50px;
+    border-top: 1px solid rgba(204, 164, 106, 0.15);
+    position: relative;
+    background: #1a1c20 !important;
+    display: block !important; /* Gizlenmesini tamamen engelliyoruz kanka */
+    z-index: 10;
+}
+
+#premiumMap {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative;
+}
+
+/* 🚨 SİHİRLİ BRONZ PİN TASARIMI (Haritada parlayan o asil noktalar kanka) */
+.custom-premium-marker {
+    width: 14px !important;
+    height: 14px !important;
+    background: #cca46a !important; /* Lüks Bronz Renk */
+    border-radius: 50% !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 0 20px #cca46a, 0 0 40px #cca46a; /* Sinematik neon bronz ışıması */
+    animation: markerPulsate 2s infinite ease-in-out;
+}
+
+/* Pinlerin nefes alıp verir gibi parlamasını sağlayan sinematik animasyon */
+@keyframes markerPulsate {
+    0% { transform: scale(0.9); opacity: 0.8; box-shadow: 0 0 10px #cca46a; }
+    50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 25px #cca46a, 0 0 50px #cca46a; }
+    100% { transform: scale(0.9); opacity: 0.8; box-shadow: 0 0 10px #cca46a; }
+}
+
+/* 🖤 LEAFLET ÇİRKİN BEYAZ POPUP KUTULARINI PREMİUM SİYAHA ÇEVİRME TELSİZİ */
+.premium-map-popup .leaflet-popup-content-wrapper {
+    background: #1a1c20 !important;
+    border: 1px solid rgba(204, 164, 106, 0.3) !important;
+    border-radius: 0px !important;
+    padding: 12px 16px !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8) !important;
+}
+
+.premium-map-popup .leaflet-popup-content h4 {
+    color: #cca46a !important; /* Bronz Başlık */
+    font-size: 13px !important;
+    letter-spacing: 1px !important;
+    margin: 0 0 6px 0 !important;
+    font-weight: 600 !important;
+}
+
+.premium-map-popup .leaflet-popup-content p {
+    color: #ffffff !important;
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+    opacity: 0.8;
+}
+
+.premium-map-popup .leaflet-popup-tip {
+    background: #1a1c20 !important;
+    border-left: 1px solid rgba(204, 164, 106, 0.3) !important;
+    border-top: 1px solid rgba(204, 164, 106, 0.3) !important;
+}
+
+.premium-map-popup .leaflet-popup-close-button {
+    color: #cca46a !important;
+    font-size: 16px !important;
+}
+/* ==========================================================================
+   🌐 GARANTI DESIGN - MASTER HORIZONTAL SOCIAL BAR (PREMIUM DESIGN)
+   ========================================================================== */
+.contact-global-sosyal-bar {
+    grid-column: 1 / -1; /* 🚨 İki sütunun birden altına tam genişlikte yayılma kilidi */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px; /* Form ve kartlardan asil uzaklaşma mesafesi */
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03); /* Minimalist üst sınır çizgisi */
+    box-sizing: border-box;
+}
+
+/* "CONNECT WITH OUR CHANNELS" Yazısı */
+.c-global-sosyal-etiket {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #cca46a; /* Premium Garanti Bronzu */
+    font-weight: 500;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Ortadan Sağa Uzayan Minimal Çizgi */
+.c-global-cizgi {
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(204, 164, 106, 0.25), transparent);
+    margin: 0 40px; /* Yazı ile ikonlar arasında sinematik köprü bağı */
+}
+
+/* 5'li İkon Grubu Kapsayıcısı */
+.c-global-sosyal-ikonlar {
+    display: flex;
+    gap: 20px; /* İkonların lüks nefes alma mesafesi */
+    align-items: center;
+}
+
+/* Her Bir Yuvarlak Butonun Temel İskeleti */
+.c-global-sosyal-link {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50%; /* Kusursuz brütalist daire kalkanı */
+    background: rgba(255, 255, 255, 0.01);
+    box-sizing: border-box;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Yağ gibi akan geçiş ivmesi kanka */
+}
+
+/* 🔥 HAREKETLİ GRAFİK - HOVER REAKSİYONU */
+.c-global-sosyal-link:hover {
+    color: #1a1c20 !important; /* İkon gece grisine bürünür */
+    background: #cca46a !important; /* Arka plan lüks bronz sıvı dolumu yapar */
+    border-color: #cca46a !important;
+    transform: translateY(-4px); /* Yerçekimine meydan okuyan mikro süzülme */
+    box-shadow: 0 10px 25px rgba(204, 164, 106, 0.25); /* Sinematik bronz neon patlaması */
+}
+
+/* Altındaki O Asil Aktif Nokta */
+.c-global-sosyal-link .aktif-nokta {
+    position: absolute;
+    bottom: -8px;
+    width: 4px;
+    height: 4px;
+    background-color: #cca46a;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 8px #cca46a;
+}
+
+.c-global-sosyal-link:hover .aktif-nokta {
+    transform: scale(1);
+}
+
+/* Mobil / Responsive Kalkanı */
+@media (max-width: 1024px) {
+    .contact-global-sosyal-bar {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .c-global-cizgi {
+        display: none; /* Mobilde çizgiyi imha et, ekran temiz kalsın */
+    }
+}
+/* ==========================================================================
+   🎯 GARANTI DESIGN - CONTACT BACK TO TOP PREMIUM LAYER
+   ========================================================================== */
+#basaDonBtnContact {
+    position: fixed !important;
+    bottom: 40px !important;
+    right: 50px !important;
+    margin: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: 9999 !important; /* 🚨 Harita katmanını tamamen ezmesi için zirveye taşıdık kanka */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    cursor: pointer !important;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Hakkımızda sayfasındaki lüks font ve harf boşluğu nizamı */
+#basaDonBtnContact .basa-don-metin {
+    font-size: 10px !important;
+    letter-spacing: 3px !important;
+    color: #cca46a !important; /* Garanti Bronzu */
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    transition: color 0.4s ease !important;
+}
+
+/* Altındaki o asil hareketli nokta */
+#basaDonBtnContact .basa-don-nokta {
+    width: 6px !important;
+    height: 6px !important;
+    background-color: #cca46a !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 10px #cca46a !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* 🔥 HOVER GRAFİK REAKSİYONU */
+#basaDonBtnContact:hover .basa-don-metin {
+    color: #ffffff !important; /* Yazı beyaza döner */
+}
+
+#basaDonBtnContact:hover .basa-don-nokta {
+    transform: scale(1.4) translateY(-3px) !important; /* Nokta büyüyüp yukarı süzülür panpa */
+    background-color: #ffffff !important;
+    box-shadow: 0 0 15px #ffffff !important;
+}
+
+/* 🚀 SCROLL AKTİVASYON KALKANI (JS tetikleyince devreye girer) */
+#basaDonBtnContact.nokta-aktif {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+/* 📱 RESPONSIVE MOBİL UYUM SİGORTASI */
+@media (max-width: 1024px) {
+    #basaDonBtnContact {
+        bottom: 30px !important;
+        right: 30px !important;
+    }
+}
+/* CONTACT FORM GRID FIX */
+#iletisimSayfasi .contact-master-konteyner {
+    display: grid !important;
+    grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr) !important;
+    gap: 100px !important;
+    align-items: stretch !important;
+}
+
+#iletisimSayfasi .contact-sol-blok {
+    grid-column: 1 !important;
+}
+
+#iletisimSayfasi .contact-sag-blok {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+}
+
+#iletisimSayfasi .contact-global-sosyal-bar {
+    grid-column: 1 / -1 !important;
+}
+#iletisimSayfasi .c-kart-yazi a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+#iletisimSayfasi .c-kart-yazi a:hover {
+    color: #cca46a !important;
+}
+.btn-isik {
+    pointer-events: none !important;
+}
+
+.btn-form-gonder {
+    pointer-events: auto !important;
+}
+/* CONTACT MOBILE - SOCIAL BAR FIX */
+@media (max-width: 768px) {
+
+    .contact-global-sosyal-bar {
+        margin-top: 30px !important;
+        padding-top: 25px !important;
+        gap: 18px !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .c-global-sosyal-etiket {
+        text-align: center !important;
+        font-size: 10px !important;
+        letter-spacing: 3px !important;
+    }
+
+    .c-global-sosyal-ikonlar {
+        justify-content: center !important;
+        gap: 16px !important;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .contact-harita-bolumu {
+        height: 280px !important;
+    }
+
+}
+/* CONTACT MOBILE - FORM EKRAN DIŞINA KAÇMA FIX */
+@media (max-width: 768px) {
+
+    #iletisimSayfasi .contact-master-konteyner {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 36px !important;
+        padding: 105px 22px 35px 22px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    #iletisimSayfasi .contact-sol-blok {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+    }
+
+    #iletisimSayfasi .contact-sag-blok {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+        width: 100% !important;
+        padding: 28px 22px !important;
+        box-sizing: border-box !important;
+    }
+
+    #iletisimSayfasi .contact-global-sosyal-bar {
+        grid-column: 1 !important;
+        grid-row: 3 !important;
+    }
+}

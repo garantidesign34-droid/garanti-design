@@ -1,0 +1,818 @@
+/* 👤 GARANTI DESIGN - ABOUT STYLES V14.0 (SPA COMPATIBLE ARCHITECTURE) */
+
+/* 🚨 RECO MASTER SPA GÜVENLİK KALKANI: 
+   Sayfa gizli değilken yüksekliği serbest bırakır ve sadece bu sayfa etkinken scroll açar panpa! */
+.about-sahne:not(.sayfa-gizli) {
+    width: 100% !important;
+    height: auto !important; 
+    min-height: calc(100vh - 156px) !important; /* Menü yüksekliği düşülerek tam ekran sigortası */
+    background-color: #141518 !important;
+    color: #ffffff !important;
+    display: block !important; 
+    overflow-y: auto !important; 
+    scroll-behavior: smooth !important;
+    padding-top: 60px !important; /* Üst boşluğu dengeli nizada çektik kanka */
+    padding-bottom: 0px !important; 
+    box-sizing: border-box !important;
+}
+
+/* Sayfa gizliyken hiçbir kuralın ana siteyi patlatmaması için mutlak koruma zırhlısı */
+.about-sahne.sayfa-gizli {
+    display: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Chrome ve Safari için görünmez scrollbar kalkanı */
+.about-sahne::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.about-konteyner-duzenleyici { 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    padding: 0 4% 60px 4%; 
+}
+
+/* 📜 1. BÖLÜM: MANİFESTO VE VİZYON YAZISI */
+.about-ust-blok {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    margin-bottom: 200px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aboutGirisMekanizmasi 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.about-ust-etiket { font-size: 11px; color: #cca46a; letter-spacing: 4px; display: block; margin-bottom: 12px; }
+.about-baslik-alani h2 { font-size: 42px; font-weight: 200; letter-spacing: 6px; color: #ffffff; margin: 0; line-height: 1.2; }
+.about-cizgi { width: 60px; height: 25px; border-bottom: 2px solid #cca46a; }
+.about-ana-yazi p { 
+    font-size: 15px; 
+    color: #b0b5bc; 
+    line-height: 1.2; 
+    font-weight: 300; 
+    letter-spacing: 0.5px; 
+    margin: 0; 
+    text-align: justify !important; 
+}
+
+/* 📊 2. BÖLÜM: PROGRESS BARS PREMIUM SİGORTA KANALLARI */
+.about-cubuk-seksiyonu { margin-bottom: 100px; }
+.about-seksiyon-baslik { font-size: 13px; color: #cca46a; letter-spacing: 5px; text-transform: uppercase; font-weight: 400; margin-bottom: 40px; text-align: center; }
+.cubuk-konteyner { display: flex; flex-direction: column; gap: 32px; max-width: 900px; margin: 0 auto; }
+.cubuk-ust-bilgi { display: flex; justify-content: space-between; font-size: 14px; font-weight: 300; letter-spacing: 1px; color: #d1d5db; margin-bottom: 10px; }
+.yuzde-degeri { color: #cca46a; font-weight: 400; font-size: 18px; letter-spacing: 0.5px; }
+
+.cubuk-arka-plan { 
+    width: 100% !important; 
+    height: 6px !important; 
+    background: rgba(255, 255, 255, 0.04) !important; 
+    border-radius: 3px !important; 
+    overflow: hidden !important; 
+    position: relative !important;
+}
+
+.cubuk-ilerleme { 
+    height: 100% !important; 
+    width: 0%; 
+    display: block !important;
+    background: linear-gradient(90deg, #9a7a4f, #cca46a, #9a7a4f) !important; 
+    background-size: 200% 100% !important;
+    will-change: width;
+}
+
+/* 🤝 3. BÖLÜM: SİNEMATİK AKICI PARTNERLER ŞERİDİ (1.5 KAT DEVLEŞTİRİLMİŞ SÜRÜM) */
+.ortaklar-seksiyonu {
+    margin-bottom: 100px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 20px 0; 
+}
+
+.ortaklar-seksiyonu::before, .ortaklar-seksiyonu::after {
+    content: ""; position: absolute; top: 0; width: 15%; height: 100%; z-index: 2; pointer-events: none;
+}
+.ortaklar-seksiyonu::before { left: 0; background: linear-gradient(90deg, #141518, transparent); }
+.ortaklar-seksiyonu::after { right: 0; background: linear-gradient(-90deg, #141518, transparent); }
+
+.ortaklar-akici-serit {
+    display: flex !important;
+    gap: 160px !important; 
+    width: max-content !important;
+    align-items: center !important;
+}
+
+.ortak-logo-kart {
+    background: transparent !important; 
+    border: none !important;             
+    width: auto !important;              
+    height: 255px !important;            
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ortak-logo-kart img {
+    width: auto !important;
+    height: 100% !important; 
+    max-width: 1100px !important; 
+    object-fit: contain !important;
+    filter: grayscale(100%) opacity(70%) !important; 
+    transition: filter 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ortak-logo-kart:hover img {
+    filter: grayscale(0%) opacity(100%) !important;
+    transform: scale(1.08) !important; 
+}
+
+/* 🎛️ 4. BÖLÜM: CORE ELEMENTS 6'LI IZGARA SİSTEMİ */
+.about-grafik-izgara { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    margin-bottom: 80px; 
+}
+
+.grafik-kart { background: linear-gradient(145deg, #1c1e22, #16171a); border: 1px solid rgba(255, 255, 255, 0.02); padding: 45px 35px; border-radius: 4px; position: relative; overflow: hidden; opacity: 0; transform: translateY(40px); animation: aboutGirisMekanizmasi 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; animation-delay: calc(var(--kart-sira) * 0.12s); }
+.grafik-kart:hover { transform: translateY(-6px); border-color: rgba(204, 164, 106, 0.25); box-shadow: 0 15px 30px rgba(204, 164, 106, 0.05); }
+.kart-isik { position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, #cca46a, transparent); transform: translateX(-100%); transition: transform 0.6s ease; }
+.grafik-kart:hover .kart-isik { transform: translateX(100%); }
+.kart-ikon { font-size: 30px; color: #cca46a; margin-bottom: 25px; transition: transform 0.3s ease; }
+.grafik-kart:hover .kart-ikon { transform: scale(1.08); }
+.grafik-kart h4 { font-size: 17px; font-weight: 300; letter-spacing: 1px; margin: 0 0 15px 0; color: #ffffff; }
+.grafik-kart p { font-size: 13px; color: #8c929a; line-height: 1.7; margin: 0; font-weight: 300; }
+
+/* 🎯 5. BÖLÜM: İLKELERİMİZ SEKSİYONU STİLLERİ */
+.about-ilkeler-seksiyonu {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.ilkeler-izgara {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ilke-kart {
+    background: transparent;
+    border-left: 0px solid rgba(255, 255, 255, 0.03); 
+    padding: 20px 0 20px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: aboutGirisMekanizmasi 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: calc(var(--ilke-sira) * 0.15s); 
+}
+
+.ilke-kart:hover {
+    border-left-color: #cca46a; 
+    transform: translateX(5px); 
+}
+
+.ilke-ikon-alani {
+    font-size: 24px;
+    color: rgba(204, 164, 106, 0.6); 
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.4s ease;
+}
+
+.ilke-kart:hover .ilke-ikon-alani {
+    color: #cca46a;
+    transform: scale(1.1) rotate(5deg); 
+}
+
+.ilke-kart h4 {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+}
+
+.ilke-kart p {
+    font-size: 13px;
+    color: #8c929a;
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* İlkelerimiz Mobil Kalkanı */
+@media (max-width: 1024px) {
+    .ilkeler-izgara { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+}
+@media (max-width: 600px) {
+    .ilkeler-izgara { grid-template-columns: 1fr; gap: 20px; }
+    .ilke-kart { padding: 15px 0 15px 20px; }
+}
+
+/* 👑 RECO: ABOUT SAYFASINDAKİ YENİ FOOTER MOLEKÜLER KALKAN */
+.about-footer-yeni {
+    width: 100% !important;
+    background: transparent !important; 
+    border-top: none !important; 
+    padding: 0 !important;
+    height: 90px !important; 
+    box-sizing: border-box !important;
+    margin-top: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+    left: 0 !important;
+    clear: both !important;
+}
+
+.about-footer-yeni .f-yeni-icerik {
+    width: 100% !important;
+    max-width: 100% !important; 
+    padding: 0 10% !important; 
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    gap: 0 !important;
+}
+
+.about-footer-yeni .f-sosyal { 
+    display: flex !important; 
+    gap: 25px !important; 
+    flex: 1 !important;
+    justify-content: flex-start !important;
+}
+
+.about-footer-yeni .f-sosyal-link { 
+    color: #ffffff !important; 
+    font-size: 16px !important; 
+    text-decoration: none !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 7px !important;
+    transition: color 0.4s ease !important;
+}
+.about-footer-yeni .f-sosyal-link:hover { color: #cca46a !important; }
+
+.about-footer-yeni .f-telif {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+    line-height: 1.6 !important;
+
+    opacity: .45 !important;
+
+    margin: 12px 0 10px !important;
+
+    order: 2 !important;
+}
+
+.about-footer-yeni .f-yasal-alan { 
+    display: flex !important; 
+    align-items: center !important; 
+    gap: 15px !important; 
+    justify-content: flex-end !important;
+    flex: 1 !important;
+    white-space: nowrap !important;
+}
+
+.about-footer-yeni .yasal-link { 
+    color: #ffffff !important; 
+    text-decoration: none !important; 
+    font-size: 10px !important; 
+    font-weight: 300 !important; 
+    letter-spacing: 1px !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 7px !important;
+    transition: color 0.4s ease !important;
+}
+.about-footer-yeni .yasal-link:hover { color: #cca46a !important; }
+
+.about-footer-yeni .ayrac { 
+    color: rgba(255, 255, 255, 0.1) !important; 
+    font-weight: 200 !important;
+    font-size: 11px !important;
+    margin-bottom: 11px !important;
+}
+
+/* KEYFRAMES KANALLARI */
+@keyframes aboutGirisMekanizmasi { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
+
+/* RESPONSIVE KALKANLARI */
+@media (max-width: 1200px) { .about-grafik-izgara { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 968px) { 
+    .about-footer-yeni .f-yeni-icerik { 
+        flex-direction: column !important; 
+        text-align: center !important; 
+        gap: 15px !important; 
+        padding: 20px 0 !important;
+    } 
+    .about-footer-yeni .f-yasal-alan { justify-content: center !important; } 
+}
+@media (max-width: 768px) { .about-grafik-izgara { grid-template-columns: 1fr; } .about-baslik-alani h2 { font-size: 32px; } }
+
+/* ==========================================================================
+    🔝 RECO MASTER - SEYYAR (FIXED) PREMIUM BAŞA DÖN NOKTASI STİLLERİ
+   ========================================================================== */
+.basa-don-alani {
+    position: fixed !important; 
+    right: 4% !important;      
+    bottom: 50px !important;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    z-index: 9999 !important;   
+    opacity: 0;                
+    pointer-events: none;       
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.basa-don-alani.nokta-aktif {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.basa-don-metin {
+    font-size: 9px;
+    font-weight: 300;
+    color: #ffffff;
+    opacity: 0.35;
+    letter-spacing: 2px;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.basa-don-nokta {
+    width: 6px;
+    height: 6px;
+    background-color: #cca46a; 
+    border-radius: 50%;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+}
+
+.basa-don-alani:hover .basa-don-metin {
+    opacity: 0.8;
+    color: #cca46a;
+}
+
+.basa-don-alani:hover .basa-don-nokta {
+    transform: translateY(-8px); 
+    background-color: #ffffff;   
+}
+/* ABOUT SERVICES VISIBILITY FIX */
+#aboutSayfasi .about-grafik-izgara {
+    display: grid !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#aboutSayfasi .grafik-kart {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+/* ABOUT SECTION TITLES VISIBILITY FIX */
+#aboutSayfasi .about-seksiyon-baslik {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}  
+/* ================================
+   ABOUT MOBILE SPACING FIX
+================================ */
+@media (max-width: 768px) {
+
+    #aboutSayfasi {
+        min-height: auto !important;
+    }
+
+    .about-konteyner-duzenleyici {
+        padding: 150px 26px 45px !important;
+    }
+
+    .about-ust-blok {
+        margin-bottom: 70px !important;
+    }
+
+    .about-baslik-alani {
+        margin-bottom: 35px !important;
+    }
+
+    .about-baslik-alani h2 {
+        font-size: 25px !important;
+        line-height: 1.35 !important;
+        letter-spacing: 6px !important;
+    }
+
+    .about-ana-yazi {
+        margin-top: 30px !important;
+    }
+
+    .about-ana-yazi p {
+        font-size: 11px !important;
+        line-height: 1.9 !important;
+    }
+
+    .about-cubuk-seksiyonu {
+        margin: 55px 0 65px !important;
+    }
+
+    .about-seksiyon-baslik {
+        margin: 55px 0 35px !important;
+        font-size: 11px !important;
+        letter-spacing: 7px !important;
+    }
+
+    .ortaklar-seksiyonu {
+        margin: 45px 0 65px !important;
+        padding: 0 !important;
+        min-height: auto !important;
+    }
+
+    .about-grafik-izgara {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+        margin-top: 30px !important;
+    }
+
+    .grafik-kart {
+        min-height: auto !important;
+        padding: 34px 28px !important;
+    }
+
+    .about-ilkeler-seksiyonu {
+        margin-top: 70px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .ilkeler-izgara {
+        gap: 34px !important;
+    }
+
+    .ilke-kart {
+        padding: 0 28px 26px !important;
+    }
+
+    .about-footer-yeni {
+        margin-top: 35px !important;
+        padding-bottom: 30px !important;
+    }
+        .about-konteyner-duzenleyici {
+        padding: 90px 26px 45px !important;
+    }
+
+    .about-ust-blok {
+        flex-direction: column !important;
+        gap: 30px !important;
+        margin-bottom: 50px !important;
+    }
+
+    .about-ana-yazi {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 0 !important;
+    }
+        .ortaklar-akici-serit {
+        gap: 45px !important;
+    }
+
+    .ortak-logo-kart {
+        height: 95px !important;
+    }
+
+    .ortak-logo-kart img {
+        height: 100% !important;
+        max-width: 180px !important;
+    }
+    .about-grafik-izgara {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+}
+
+.grafik-kart {
+    padding: 24px 18px !important;
+}
+
+.kart-ikon {
+    font-size: 22px !important;
+    margin-bottom: 14px !important;
+}
+
+.grafik-kart h4 {
+    font-size: 14px !important;
+}
+
+.grafik-kart p {
+    display: none !important;
+}
+    .ilkeler-izgara {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 14px !important;
+        padding: 0 !important;
+    }
+
+    .ilke-kart {
+        padding: 24px 18px !important;
+        background: linear-gradient(145deg, #1c1e22, #16171a) !important;
+        border: 1px solid rgba(255,255,255,.03) !important;
+        border-radius: 4px !important;
+    }
+
+    .ilke-ikon-alani {
+        font-size: 21px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .ilke-kart h4 {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+        letter-spacing: 1.2px !important;
+    }
+
+    .ilke-kart p {
+        display: none !important;
+    }
+        .about-grafik-izgara {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 14px !important;
+    }
+
+    .grafik-kart {
+        padding: 24px 18px !important;
+    }
+
+    .kart-ikon {
+        font-size: 22px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .grafik-kart h4 {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+    }
+
+    .grafik-kart p {
+        display: none !important;
+    }
+    @media (max-width: 768px) {
+
+    .ilke-kart::before,
+    .ilke-kart::after {
+        display: none !important;
+    }
+
+}
+@media (max-width: 768px) {
+    .ortaklar-akici-serit {
+        display: flex !important;
+        gap: 38px !important;
+        animation: mobilLogoAkis 22s linear infinite !important;
+        will-change: transform;
+    }
+
+.ortak-logo-kart {
+    height: 110px !important;
+    width: 160px !important;
+}
+
+.ortak-logo-kart img {
+    max-width: 160px !important;
+    height: 100% !important;
+}
+
+    @keyframes mobilLogoAkis {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-50% - 19px));
+        }
+    }
+}
+.about-cubuk-seksiyonu .cubuk-ust-bilgi {
+    font-size: 11px !important;
+    letter-spacing: 0.5px !important;
+}
+
+.about-cubuk-seksiyonu .yuzde-degeri {
+    font-size: 15px !important;
+}
+/* ABOUT MOBILE PREMIUM FOOTER */
+@media (max-width: 768px) {
+
+    .about-footer-yeni {
+        height: auto !important;
+        margin-top: 55px !important;
+        padding: 34px 0 26px !important;
+        border-top: 1px solid rgba(204,164,106,.12) !important;
+    }
+
+    .about-footer-yeni .f-yeni-icerik {
+        padding: 0 26px !important;
+        gap: 8px !important;
+    }
+
+    .about-footer-yeni .f-sosyal {
+        justify-content: center !important;
+        gap: 22px !important;
+        order: 1 !important;
+    }
+
+    .about-footer-yeni .f-sosyal-link {
+        font-size: 15px !important;
+    }
+
+    .about-footer-yeni .f-telif {
+        order: 2 !important;
+        font-size: 8px !important;
+        letter-spacing: 1.6px !important;
+        line-height: 1.7 !important;
+        opacity: .38 !important;
+    }
+
+    .about-footer-yeni .f-yasal-alan {
+        order: 3 !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .about-footer-yeni .yasal-link {
+        font-size: 8px !important;
+        letter-spacing: 1.5px !important;
+        opacity: .65 !important;
+    }
+
+    .about-footer-yeni .ayrac {
+        display: none !important;
+    }
+}
+.about-footer-yeni .f-sosyal {
+    justify-content: center !important;
+    gap: 34px !important;
+    width: 100% !important;
+}
+
+.about-footer-yeni .f-sosyal-link {
+    font-size: 18px !important;
+}
+
+.about-footer-yeni .f-telif {
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+}
+
+.about-footer-yeni .f-yasal-alan {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 14px !important;
+}
+
+.about-footer-yeni .ayrac {
+    display: none !important;
+}
+
+.about-footer-yeni .yasal-link {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 8px 0 !important;
+}
+.about-footer-yeni .f-sosyal {
+    gap: 24px !important;
+}
+
+.about-footer-yeni .f-sosyal-link {
+    font-size: 14px !important;
+}
+.about-footer-yeni .f-yasal-alan {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0 !important;
+    margin-top: 14px !important;
+}
+
+.about-footer-yeni .yasal-link {
+    flex: 1 !important;
+    text-align: center !important;
+    font-size: 8px !important;
+    letter-spacing: 1px !important;
+}
+
+.about-footer-yeni .ayrac {
+    display: none !important;
+}
+.about-footer-yeni .f-telif {
+    display: block !important;
+    width: 100% !important;
+    flex: none !important;
+    text-align: center !important;
+    font-size: 8px !important;
+    letter-spacing: 1.5px !important;
+    opacity: .45 !important;
+    margin: 10px 0 14px !important;
+}
+}
+/* ABOUT FOOTER TELIF FIX - SADECE ABOUT */
+@media (max-width: 768px) {
+
+    #aboutSayfasi .about-footer-yeni {
+        display: block !important;
+        height: auto !important;
+        min-height: 150px !important;
+        padding: 28px 0 24px !important;
+        margin-top: 45px !important;
+        overflow: visible !important;
+    }
+
+    #aboutSayfasi .about-footer-yeni .f-yeni-icerik {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 14px !important;
+        padding: 0 24px !important;
+    }
+
+    #aboutSayfasi .about-footer-yeni .f-sosyal {
+        order: 1 !important;
+        display: flex !important;
+        justify-content: center !important;
+        gap: 22px !important;
+        width: 100% !important;
+    }
+
+    #aboutSayfasi .about-footer-yeni .f-telif {
+        order: 2 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: .55 !important;
+        width: 100% !important;
+        height: auto !important;
+        text-align: center !important;
+        color: rgba(255,255,255,.55) !important;
+        font-size: 8px !important;
+        line-height: 1.6 !important;
+        letter-spacing: 1.2px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex: none !important;
+    }
+
+    #aboutSayfasi .about-footer-yeni .f-yasal-alan {
+        order: 3 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 0 !important;
+    }
+
+    #aboutSayfasi .about-footer-yeni .yasal-link {
+        flex: 1 !important;
+        text-align: center !important;
+        font-size: 7px !important;
+        letter-spacing: .7px !important;
+    }
+
+    #aboutSayfasi .about-footer-yeni .ayrac {
+        display: none !important;
+    }
+}
+@media (max-width: 768px) {
+    #aboutSayfasi .about-footer-yeni .f-telif {
+        opacity: .55 !important;
+    }
+
+    #aboutSayfasi .about-footer-yeni {
+        border-top: 1px solid rgba(204,164,106,.08) !important;
+    }
+}
